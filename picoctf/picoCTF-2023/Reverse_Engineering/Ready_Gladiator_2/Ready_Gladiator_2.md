@@ -7,7 +7,8 @@ To get the flag, you must beat the Imp all 100 rounds.
 ## Data
 imp.red
 
-## Again we have the classic Imp as enemy. But now we have to win all rounds. I just researched a bit and found the D-Clear Warrior (https://corewar.co.uk/clearimp.htm) and tested him out. In the first run he won 99 of the rounds. So i gave him a few tries in hope he can also get the 100. And he did:
+## Solution
+Again we have the classic Imp as enemy. But now we have to win all rounds. I just researched a bit and found the D-Clear Warrior (https://corewar.co.uk/clearimp.htm) and tested him out. In the first run he won 99 of the rounds. So i gave him a few tries in hope he can also get the 100. And he did:
 ```
 [root@picoctf Ready_Gladiator_0]$ nc saturn.picoctf.net 63915
 Submit your warrior: (enter 'end' when done)

@@ -1,0 +1,30 @@
+https://www.nayuki.io/page/png-file-chunk-inspector (online png analyser)
+https://en.wikipedia.org/wiki/Portable_Network_Graphics (png header information)
+Bless Hex Editor
+
+- take a look hexdump -C
+- seems like png file, with wrong header
+- check wiki for correct header
+- swap IEND with IHDR
+- upload file to online analyser
+- one IDAT chunk seems to be broken
+  - correct the 4 size bytes to 500.000 (like the other chunks)
+- all chunks have incorrect CRC
+  - fixing them was not the solution
+- the "wrong" crc seems to be numerated (0b, 0a, 09, 08, 07, ..., 01)
+  - change the order of those chunks to 01, 02, ..., 0b
+  - first 4 bytes are "00 07 A1 20" (size 500.000 bytes) and the last is the crc, for example "00 00 00 01"
+  - the ...0b chunk has not 500.000 bytes size, so probably it should be the last
+  - rearrange the order with the Bless Hex Editor
+  - correct the CRC like the online analyser has shown
+-> correct png is shown with the flag
+(chunks has to be reversed, size fixed of one chunk, crc corrected)
+
+Flag:
+CSCG{r4v3nb100d_j01n_my_4rmy_0f_th3_d34d!}
+
+
+
+Programs to fix found on discord:
+https://github.com/Hedroed/png-parser
+https://github.com/sherlly/PCRT 

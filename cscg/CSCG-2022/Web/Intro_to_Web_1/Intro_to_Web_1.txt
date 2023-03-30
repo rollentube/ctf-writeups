@@ -1,0 +1,44 @@
+Flag: CSCG{ImgAvH8w51a7364a71CXUTb7Gp}
+
+Under investigating the HTML document you can find the first part of the flag in a comment. The second part will print through a JavaScript function showFlag(), also found in the HTML document.
+
+Getting the document:
+
+$ curl https://1f9b6d6bf3a9f05c8ea52261-intro-web-1.challenge.master.cscg.live:31337/ > web_1
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 10249  100 10249    0     0  65340      0 --:--:-- --:--:-- --:--:-- 65698
+$
+
+
+
+First part: HTML comment
+CSCG{ImgAvH8w5
+
+<!--
+[...]
+Here's the first part of the flag:
+CSCG{ImgAvH8w5
+ -->
+
+
+Second part: JavaScript, call function showFlag() on browser console
+1a7364a71
+
+
+Third part: Part of HTTP response
+CXUTb7Gp}
+
+$ curl -I https://1f9b6d6bf3a9f05c8ea52261-intro-web-1.challenge.master.cscg.live:31337/
+HTTP/1.1 200 OK
+Server: nginx/1.20.2
+Date: Sun, 06 Mar 2022 21:50:30 GMT
+Content-Type: text/html
+Content-Length: 10249
+Last-Modified: Mon, 14 Feb 2022 22:31:56 GMT
+Connection: keep-alive
+ETag: "620ad85c-2809"
+FlagPart3: CXUTb7Gp}
+Cache-Control: no-store
+Accept-Ranges: bytes
+$

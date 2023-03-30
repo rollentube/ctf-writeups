@@ -1,0 +1,5 @@
+[assembly: AssemblyDescription("Decompile This Small Application, Analyze It And Get The Flag!")]
+
+Decompile Analyze And Get The Flag
+
+CSCG{Decompile_Analyze_And_Get_The_Flag!}

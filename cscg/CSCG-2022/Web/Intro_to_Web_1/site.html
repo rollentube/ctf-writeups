@@ -1,0 +1,259 @@
+Flag:
+
+First part: HTML comment
+CSCG{ImgAvH8w5
+
+Second part: JavaScript, call function showFlag()
+1a7364a71
+
+Third part: Part of HTTP response
+CXUTb7Gp}
+
+
+<html>
+<head>
+    <title>Intro to Web 1</title>
+    <meta charset="UTF-8">
+    <style>
+        html {
+            max-width: 70ch;
+            padding: 3em 1em;
+            margin: auto;
+            line-height: 1.75;
+            font-size: 1.25em;
+
+            background-color: #1E2122;
+            color: #BDB7AF;
+        }
+        h1, h2, h3 {
+            color: #E8E6E3;
+        }
+        hr {
+            margin-top: -1em;
+        }
+        a {
+            color: lightblue;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+
+<h1>Intro to Web 1</h1>
+You've never touched web hacking before?
+You want to know what actually happens when you hit Enter in your browser's address bar?
+You want to learn about all the things that happen in the background while you're seeing this
+rather boring bit of text on your screen?
+<p>
+Then this challenge is for you.
+<p>
+Prepare yourself, for the web is vast and full of errors.
+
+<h3>HTML - What you see vs. what you get</h3>
+<hr>
+You probably know that what you're currently looking at isn't the raw HTML document that I wrote.
+Instead, you're looking at a rendered version that your browser produced.
+But how does your browser know that the background should be dark grey, the headings white and
+<span style="color: red">this bit of text here red</span>?
+<p>
+Obviously there is more to this site than your browser is explicitly showing you. Perhaps you
+should take a closer look and <em>Inspect</em> it?
+<p>
+<span style="color: grey">(Right-click and "Inspect")</span>
+<!--
+You see, HTML documents contain quite a bit of information. Sure, it has all of the raw text
+but it also contains options for formatting, color, layout, meta-tags and even dynamic JavaScript
+ code.
+
+What you're currently looking at it just HTML's version of a comment. Your browser will
+completely ignore this, which is why you can't see it in the rendered version. In CTF
+challenges, you'll often find useful information in the HTML source, sometimes even in comments.
+
+Here's the first part of the flag:
+CSCG{ImgAvH8w5
+
+ -->
+<h3>JavaScript - <em>Their</em> code, but on <em>your</em> computer</h3>
+<hr>
+Now, a site with a bit of text might make for an interesting read, but surely, the web can do
+more than that.
+Just look at all the social networks, search engines, internet shops, and CTF platforms!
+<p>
+What do these things have in common?
+Right, they have dynamic elements!
+They react to things that you, the user, do.
+You have a range of fancy buttons, sliders, text fields, and much more.
+<p>
+<a href="." onclick="textGoPoof(this);return false;">You can even click on this piece of text...</a>
+<br>
+<span style="color: grey">(Inspect the site to find out how this works.)</span>
+
+<script>
+function textGoPoof(text){
+    text.innerHTML = "...and make it change!"
+}
+</script>
+<p>
+Of course, JavaScript can do more than just change text.
+It is a full-fledged programming language after all.
+But the really important thing here is:
+The JavaScript code in this HTML document runs on <em>your</em> browser, <em>your</em> computer.
+And that means that you're in control here!
+You can make your browser <em>not</em> execute something.
+Or execute something different instead!
+<p>
+Sometimes a website author will want to limit the user in some capacity.
+And sometimes, they erroneously rely on client-side JavaScript to accomplish that task.
+<p>
+Surely you've seen something like this before:
+<p>
+<span id="flag-button" style="border: 1px solid #E8E6E3; border-radius: 1em; padding: 0.5em">
+    You have to wait <span id="flag-timer">100000</span> seconds before you can get the flag.
+</span>
+<script>
+// This variable right here keeps track of how long you have to wait.
+countDownTime = 10000;
+
+function countDown() {
+    countDownTime--;
+    if (countDownTime > 0) {
+        document.getElementById("flag-timer").innerHTML = countDownTime;
+    } else {
+        clearInterval(countDownIntervalId);
+        document.getElementById("flag-button").innerHTML = ""+
+            '<a href="." onClick="showFlag();return false;">Show flag!</a>';
+    }
+}
+
+function showFlag() {
+    // You don't need to understand how this part of the flag is generated.
+    // All you need to know is the result of what happens here.
+    const randomGenerator = mulberry32(0x5eed);
+    const flag = Math.floor(randomGenerator() * 10000000000).toString(16);
+
+    alert(`Here's the second part of your flag: ${flag}`);
+}
+</script>
+<p>
+Your browser also has a JavaScript console.
+Using that, you can execute arbitrary functions and change global variables.
+<br>
+<span style="color: grey">
+    (Inspect the code that's running above and then switch to the "Console" tab.)
+</span>
+<p>
+How could that be useful here?
+
+<h3>HTTP - GETting a HTML document from a web server</h3>
+<hr>
+So now that you have a rough grasp on how HTML documents work in a browser, let's take one step back
+and talk about how we get that HTML document in the first place.
+<p>
+So obviously <em>something</em> happens between you hitting Enter in your address bar or clicking
+on a link and you actually seeing the website you've just browsed to.
+Somehow, your browser must have gotten hold of that HTML document that you've just examined.
+<p>
+In essence, your browser connected to one of the CSCG web servers and asked for that document.
+Of course our web server then sent that document back to you.
+And - as with all things on the internet - there is a standardized protocol that was used to
+implement this exchange.
+This protocol is the Hypertext Transfer Protocol, or HTTP.
+(You have no doubt noticed that "http://" in your address bar a couple of times.)
+<p>
+In our simple use case here, your browser made what is called a "HTTP request", and our web server
+returned a "HTTP response".
+These two things aren't all that magical.
+They're basically "just text".
+You can even look at the entire HTTP "conversation" and read it for yourself!
+<p>
+Now in order to do that, we need a program that lets us capture and examine HTTP requests.
+You <em>can</em> do that in Firefox or Chrome itself, but we'll do some more fancy manipulation
+later on for which a dedicated program is quite useful.
+There are multiple HTTP capture programs out there, and which one you'll eventually end up using is
+on you.
+But for the sake of this challenge, let's both go with a program called
+<a href="https://github.com/zaproxy/zaproxy" target="_blank">ZAP</a>.
+<p>
+Now getting this thing to run will take a couple steps.
+But don't worry, you only have to do them once and then it's quite easy to switch around in the
+future.
+Here's what you need to do:
+<ol>
+    <li>Install ZAP. How that works exactly depends on your system.</li>
+    <li>Configure your browser to route all of its HTTP traffic through ZAP. In order to do
+        that, open your browser settings and set your HTTP and HTTPS proxy to
+        <pre>Host: localhost, Port: 8080</pre>
+        You might have to look up how that works in your browser.
+        But that should all be fairly simple.</li>
+    <li>Optional: If you don't want to navigate through your browser config every time you stop
+        or start ZAP, I suggest installing a plugin that lets you quickly switch proxies, such as
+        FoxyProxy.</li>
+    <li>At this point, ZAP will work for HTTP connections but not HTTPS connections.
+        That's because, well, transport encryption (the "S"-part in HTTPS) is there to protect
+        <em>against</em> exactly what we're doing here.
+        You're not supposed to be able to look into a HTTPS connection.
+        If ZAP tries to hijack the encryption handshake, our browser will notice that something is
+        off and abort.
+        <p>
+        So in order to circumvent this, we have to explicitly trust ZAP by importing ZAP's TLS
+        certificate into our browser.
+        To do that, open ZAP, then click on the cog icon at the top, go to "Dynamic SSL
+            certificates" and hit "Save".
+        <p>
+        After saving the certificate, open your browser settings, go to the certificate settings
+        and import the file you just saved as a new "Certificate Authority" and trust it to
+        "identify websites".
+        Note, you might accidentally try to add the certificate as a "Client Certificate".
+        That's now what you want.
+        Make sure you're in the "Authority" tab or whatever it is called in your browser.</li>
+</ol>
+<p>
+Okay, that was quite a bit of preparation.
+But don't worry, you probably have the worst part of the tooling setup in this entire multi-part
+challenge done now.
+<p>
+Alright, now try hitting F5 on this website and see what happens!
+<p>
+In ZAP, you should now see a new entry under "History".
+If you have <em>a lot</em> of entries now, then your browser probably did something else in the
+back.
+Try closing all other tabs to reduce the clutter.
+<p>
+That history entry represents a single HTTP request-response-pair.
+Clicking on it will populate the "Request" window in the top right.
+This is what your browser sent to the CSCG web server when you refreshed the page.
+<p>
+You can also see that the request consists of two parts:
+The request header (top window) and the request body (bottom window).
+The latter, however, is completely empty.
+That's because your browser didn't send any payload along with its request.
+We'll look at requests with payloads later on.
+<p>
+Let's switch to the "Response" window now and look at what the server sent back to you.
+Here, the response body looks awfully familiar: It's the HTML document itself!
+So that's how your browser got that document.
+<p>
+Now take a look at the response header as well.
+Maybe you'll notice something strange.
+
+<!--
+Everything after this point is not strictly part of the challenge.
+You can still look at it if you're interested, but you don't need anything from here to pass.
+-->
+<script>
+    // https://stackoverflow.com/a/47593316
+    function mulberry32(a) {
+        return function() {
+            var t = a += 0x6D2B79F5;
+            t = Math.imul(t ^ t >>> 15, t | 1);
+            t ^= t + Math.imul(t ^ t >>> 7, t | 61);
+            return ((t ^ t >>> 14) >>> 0) / 4294967296;
+        }
+    }
+
+    countDownIntervalId = setInterval(countDown, 1000);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+[2022-03-23T22:34:53+0100] [PACMAN] Running 'pacman -S wine'
+lib32-libpng lib32-pcre lib32-attr lib32-glib2 lib32-harfbuzz lib32-freetype2 lib32-fontconfig lib32-libjpeg-turbo lib32-libtiff lib32-lcms2 lib32-libxrender lib32-libxcursor lib32-libxrandr lib32-libxi lib32-acl lib32-gettext glu lib32-glu lib32-libice lib32-libsm lib32-libnl lib32-libtirpc lib32-pam lib32-libcap lib32-libgcrypt lib32-systemd lib32-dbus lib32-libpcap gst-libav faudio lib32-sdl2 lib32-faudio wine
+
+[2022-03-23T22:37:07+0100] [PACMAN] Running 'pacman -S winetricks'
+cabextract xorg-xmessage winetricks

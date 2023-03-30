@@ -1,0 +1,52 @@
+<html>
+<head>
+    <title>Intro to Web 2</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+<h1>$(GERMAN_CITY) Tram Ticket Machine</h1>
+
+<h3>Get your <span style="text-decoration: line-through;">ticket</span> flag here!</h3>
+<hr>
+With the help of our state-of-the-art floppy disk switching robots, you can now read the first
+part of the flag in real time!
+<p>
+Flag part 1/4: <span style="color: green; font-family: 'Courier New', monospace;">
+    CSCG{<span id="flag">........</span></span>
+
+<!--
+No time to wait, right?
+-->
+
+<script>
+flag = "l9jj550K"
+symbolsRevealed = 0
+waitTime = 1000;
+
+function nextSymbol() {
+    if (symbolsRevealed >= flag.length) return;
+    symbolsRevealed++;
+
+    waitTime *= 2;
+    setTimeout(nextSymbol, waitTime);
+}
+
+function spin() {
+    const flagPart = flag.substr(0, symbolsRevealed);
+    const alphabet = ("ABCDEFGHIJKLMNOPRSTUVWXYZabcdefhiklmnorstuvwxz0123456789")
+    const randomSymbol =
+        symbolsRevealed < flag.length
+            ? alphabet.charAt(Math.floor(Math.random() * alphabet.length))
+            : "";
+    const suffix = ".".repeat(Math.max(0, flag.length - 1 - symbolsRevealed));
+
+    document.getElementById("flag").innerHTML = flagPart + randomSymbol + suffix;
+}
+
+setTimeout(nextSymbol, waitTime);
+setInterval(spin, 50);
+</script>
+
+</body>
+</html>

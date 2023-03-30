@@ -1,0 +1,28 @@
+eyJlbWFpbCI6ICJ0ZXN0QHRlc3QuQWRtaW4iLCAiZnVsbG5hbWUiOiAiXyBfIiwgInJvbGUiOiAiR3Vlc3QiLCAic2lnbmF0dXJlIjogIjY1YmEwMGJhNWE2NmEzZmM1ZGY4NjExZTlkYmU2NDUxOWFkYzE0M2M2OGI0N2UzNjgyZDhlZjQ2NmU5Zjg0MWEifQ==
+
+{"email": "test@test.Admin", "fullname": "_ _", "role": "Guest", "signature": "65ba00ba5a66a3fc5df8611e9dbe64519adc143c68b47e3682d8ef466e9f841a"}
+
+
+Changed to (CyberChef):
+
+{"email": "test@test.", "fullname": "Guest_ _", "role": "Admin", "signature": "65ba00ba5a66a3fc5df8611e9dbe64519adc143c68b47e3682d8ef466e9f841a"}
+
+eyJlbWFpbCI6ICJ0ZXN0QHRlc3QuIiwgImZ1bGxuYW1lIjogIkd1ZXN0XyBfIiwgInJvbGUiOiAiQWRtaW4iLCAic2lnbmF0dXJlIjogIjY1YmEwMGJhNWE2NmEzZmM1ZGY4NjExZTlkYmU2NDUxOWFkYzE0M2M2OGI0N2UzNjgyZDhlZjQ2NmU5Zjg0MWEifQ==
+
+
+Change Token via a Cookie Manager or ZAP and call .../admin
+
+Admin panel
+Admin controls
+
+Controls currently disabled.
+Current FlagCMS settings
+ADMIN_CONTROLS=off
+USER_REGISTRATION=enabled
+FLAG_STYLE=flaggy
+SHELL=/bin/bash
+FLAG_INFO=CSCG{97c234a62ef83d90}
+CRYPTO=self-rolled
+LC_NAME=en_US.UTF-8
+LANG=en_US.UTF-8
+

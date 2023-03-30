@@ -1,0 +1,21 @@
+http://www.youtube.com/watch?v=lb0dBVWozRo
+http://www.youtube.com/watch?v=f8OHybVhQwc
+http://www.youtube.com/watch?v=OmEpkztK5Lw
+http://www.youtube.com/watch?v=9o4LKzaMaOo
+http://www.youtube.com/watch?v=W3W9Yj8a0Fg
+http://www.youtube.com/watch?v=8A2t_tAjMz8
+http://www.youtube.com/watch?v=DujEvJIW_9I
+http://www.youtube.com/watch?v=u2nRLeEQhYo
+http://www.youtube.com/watch?v=uAZ9R2t5Jd0
+http://www.youtube.com/watch?v=vb3NnS_DjGE
+http://www.youtube.com/watch?v=utUVQdf5KW0
+http://www.youtube.com/watch?v=Q2hLFoFcVi8
+http://www.youtube.com/watch?v=-yXl4icHlw8
+http://www.youtube.com/watch?v=ZeqR4tYSmGI
+
+- all some knock knock songs, videos doesnt seem like flag stuff
+- found a package between the youtube response with another client (192.168.26.31)
+- two bytes of those messages seems like parts of the flag (spotted CSCG{*) -> destination port in the header
+- searched for same values in the packages to filter
+- filtered: ((ip.src == 192.168.26.53) && (ip.dst == 192.168.26.31)) && (frame.len == 66)
+- flag: CSCG{p021_kn0ck1ng_f14g}

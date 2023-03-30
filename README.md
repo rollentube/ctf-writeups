@@ -10,6 +10,7 @@ So far I played on the following platforms:
 - picoCTF (https://play.picoctf.org/users/rollentube)
 - TryHackMe (https://tryhackme.com/p/rollentube)
 - CSCG
+- PortSwigger
 
 ## Disclaimer
 I am not a professional, I just having fun learning new stuff and want to share my writeups.

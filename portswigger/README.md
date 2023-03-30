@@ -5,6 +5,7 @@ PortSwigger is a platform where you can develop your web security skills. So not
 You dont have to follow the path, but if you want it is structured as followed:
 
 Server-side topics
+
 1. SQL injection
 2. Authentication
 3. Directory traversal
@@ -17,6 +18,7 @@ Server-side topics
 10. XXE injection
 
 Client-side topics
+
 11. Cross-site scripting (XSS)
 12. Cross-site request forgery (CSRF)
 13. Cross-origin resource sharing (CORS)
@@ -25,6 +27,7 @@ Client-side topics
 16. WebSockets
 
 Advanced topics
+
 17. Insecure deserialization
 18. Server-side template injection
 19. Web cache poisoning

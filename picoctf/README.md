@@ -61,7 +61,7 @@ Web Exploitation (Solved 5/7)
 - cancri-sp
 - msfroggenerator2
 
-Challanges that I have solved during the competition are marked bold and tagged as solved. Tasks that I solved after the tournament are simply linked to the writeup.
+In total I got 4900/9300 points. Challanges that I have solved during the competition are marked bold and tagged as solved. Tasks that I solved after the tournament are simply linked to the writeup.
 
 ## picoCTF 2022
 I have not participated in this competition. The writeups are only reworkings on my part.

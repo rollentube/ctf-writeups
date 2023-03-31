@@ -1,6 +1,6 @@
 # FindAndOpen
 Someone might have hidden the password in the trace file.
-Find the key to unlock this file. This tracefile might be good to analyze.
+Find the key to unlock this file. This tracefile might be good to analyze. (200 Points)
 
 ## Files
 - flag.zip

@@ -1,7 +1,7 @@
 # who is it
 Someone just sent you an email claiming to be Google's co-founder Larry Page but you suspect a scam.
 Can you help us identify whose mail server the email actually originated from?
-Download the email file here. Flag: picoCTF{FirstnameLastname}
+Download the email file here. Flag: picoCTF{FirstnameLastname} (100 Points)
 
 ## Files
 - email-export.eml

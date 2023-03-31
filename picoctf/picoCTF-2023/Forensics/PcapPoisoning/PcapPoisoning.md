@@ -1,6 +1,6 @@
 # PcapPoisoning
 How about some hide and seek heh?
-Download this file and find the flag.
+Download this file and find the flag. (100 Points)
 
 ## Files
 - trace.pcap

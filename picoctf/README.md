@@ -47,7 +47,7 @@ Reverse Engineering (Solved 7/9)
 - **[Safe Opener 2](picoCTF-2023/Reverse_Engineering/Safe_Opener_2) (Solved)**
 - **[timer](picoCTF-2023/Reverse_Engineering/timer) (Solved)**
 - **[Virtual Machine 0](picoCTF-2023/Reverse_Engineering/Virtual_Machine_0) (Solved)**
-- [No way out](picoCTF-2023/Reverse_Engineering/No_way_out.md)
+- [No way out](picoCTF-2023/Reverse_Engineering/No_way_out/No_way_out.md)
 - **[Ready Gladiator 1](picoCTF-2023/Reverse_Engineering/Ready_Gladiator_1) (Solved)**
 - Virtual Machine 1
 - **[Ready Gladiator 2](picoCTF-2023/Reverse_Engineering/Ready_Gladiator_2) (Solved)**

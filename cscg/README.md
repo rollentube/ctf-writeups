@@ -67,10 +67,10 @@ Reverse Engineering
 - [Intro to Reverse Engineering 3](CSCG-2022/Reverse_Engineering/Intro_to_Reverse_Engineering_3/)
 
 Web
-- [Auth token](CSCG-2022/Web/auth_token/)
+- [Auth token](CSCG-2022/Web/auth_token/auth_token.txt)
 - [Intro to Web 1](CSCG-2022/Web/Intro_to_Web_1/)
 - [Intro to Web 2](CSCG-2022/Web/Intro_to_Web_2/)
-- [Intro to Web 3](CSCG-2022/Web/Intro_to_Web_3/)
+- [Intro to Web 3](CSCG-2022/Web/Intro_to_Web_3/Intro_to_Web_3.txt)
 - [Pathological](CSCG-2022/Web/pathological/)
 
 ## References

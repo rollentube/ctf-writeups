@@ -11,6 +11,7 @@ So far I played on the following platforms:
 - TryHackMe (https://tryhackme.com/p/rollentube)
 - CSCG
 - PortSwigger
+- OverTheWire
 
 ## Disclaimer
 I am not a professional, I just having fun learning new stuff and want to share my writeups. Also this repo is a centralized kinda CTF KDB and timeline for me.

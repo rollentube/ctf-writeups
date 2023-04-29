@@ -6,28 +6,28 @@ The competitions contains the following challanges:
 
 Binary Exploitation (Solved 4/7)
 - babygame01
-- **[two-sum](picoCTF-2023/Binary_Exploitation/two-sum) (Solved)**
+- **[two-sum](picoCTF-2023/Binary_Exploitation/two-sum.md) (Solved)**
 - babygame02
-- **[hijacking](picoCTF-2023/Binary_Exploitation/hijacking) (Solved)**
-- **[tic-tac](picoCTF-2023/Binary_Exploitation/tic-tac) (Solved)**
-- **[VNE](picoCTF-2023/Binary_Exploitation/VNE) (Solved)**
+- **[hijacking](picoCTF-2023/Binary_Exploitation/hijacking.md) (Solved)**
+- **[tic-tac](picoCTF-2023/Binary_Exploitation/tic-tac.md) (Solved)**
+- **[VNE](picoCTF-2023/Binary_Exploitation/VNE.md) (Solved)**
 - Horsetrack
 
 Cryptography (Solved 3/7)
-- **[HideToSee](picoCTF-2023/Cryptography/HideToSee) (Solved)**
-- **[ReadMyCert](picoCTF-2023/Cryptography/ReadMyCert) (Solved)**
-- **[rotation](picoCTF-2023/Cryptography/rotation) (Solved)**
+- **[HideToSee](picoCTF-2023/Cryptography/HideToSee.md) (Solved)**
+- **[ReadMyCert](picoCTF-2023/Cryptography/ReadMyCert.md) (Solved)**
+- **[rotation](picoCTF-2023/Cryptography/rotation.md) (Solved)**
 - PowerAnalysis: Warmup
 - PowerAnalysis: Part 1
 - SRA
 - PowerAnalysis: Part 2
 
 Forensics (Solved 5/7)
-- **[hideme](picoCTF-2023/Forensics/hideme) (Solved)**
-- **[PcapPoisoning](picoCTF-2023/Forensics/PcapPoisoning) (Solved)**
-- **[who is it](picoCTF-2023/Forensics/who_is_it) (Solved)**
-- **[FindAndOpen](picoCTF-2023/Forensics/FindAndOpen) (Solved)**
-- **[MSB](picoCTF-2023/Forensics/MSB) (Solved)**
+- **[hideme](picoCTF-2023/Forensics/hideme.md) (Solved)**
+- **[PcapPoisoning](picoCTF-2023/Forensics/PcapPoisoning.md) (Solved)**
+- **[who is it](picoCTF-2023/Forensics/who_is_it.md) (Solved)**
+- **[FindAndOpen](picoCTF-2023/Forensics/FindAndOpen.md) (Solved)**
+- **[MSB](picoCTF-2023/Forensics/MSB.md) (Solved)**
 - Invisible WORDs
 - UnforgottenBits
 
@@ -35,20 +35,20 @@ General Skills (Solved 8/8)
 - **[chrono](picoCTF-2023/General_Skills/chrono.md) (Solved)**
 - **[money-ware](picoCTF-2023/General_Skills/money-ware.md) (Solved)**
 - **[Permissions](picoCTF-2023/General_Skills/Permissions.md) (Solved)**
-- **[repetitions](picoCTF-2023/General_Skills/repetitions) (Solved)**
+- **[repetitions](picoCTF-2023/General_Skills/repetitions.md) (Solved)**
 - **[Rules 2023](picoCTF-2023/General_Skills/Rules_2023.md) (Solved)**
 - **[useless](picoCTF-2023/General_Skills/useless.md) (Solved)**
 - **[Special](picoCTF-2023/General_Skills/Special.md) (Solved)**
 - **[Specialer](picoCTF-2023/General_Skills/Specialer.md) (Solved)**
 
 Reverse Engineering (Solved 7/9)
-- **[Ready Gladiator 0](picoCTF-2023/Reverse_Engineering/Ready_Gladiator_0) (Solved)**
-- **[Reverse](picoCTF-2023/Reverse_Engineering/Reverse) (Solved)**
-- **[Safe Opener 2](picoCTF-2023/Reverse_Engineering/Safe_Opener_2) (Solved)**
-- **[timer](picoCTF-2023/Reverse_Engineering/timer) (Solved)**
-- **[Virtual Machine 0](picoCTF-2023/Reverse_Engineering/Virtual_Machine_0) (Solved)**
+- **[Ready Gladiator 0](picoCTF-2023/Reverse_Engineering/Ready_Gladiator_0.md) (Solved)**
+- **[Reverse](picoCTF-2023/Reverse_Engineering/Reverse.md) (Solved)**
+- **[Safe Opener 2](picoCTF-2023/Reverse_Engineering/Safe_Opener_2.md) (Solved)**
+- **[timer](picoCTF-2023/Reverse_Engineering/timer.md) (Solved)**
+- **[Virtual Machine 0](picoCTF-2023/Reverse_Engineering/Virtual_Machine_0.md) (Solved)**
 - [No way out](picoCTF-2023/Reverse_Engineering/No_way_out/No_way_out.md)
-- **[Ready Gladiator 1](picoCTF-2023/Reverse_Engineering/Ready_Gladiator_1) (Solved)**
+- **[Ready Gladiator 1](picoCTF-2023/Reverse_Engineering/Ready_Gladiator_1.md) (Solved)**
 - Virtual Machine 1
 - **[Ready Gladiator 2](picoCTF-2023/Reverse_Engineering/Ready_Gladiator_2) (Solved)**
 
@@ -57,7 +57,7 @@ Web Exploitation (Solved 5/7)
 - **[MatchTheRegex](picoCTF-2023/Web_Exploitation/MatchTheRegex.md) (Solved)**
 - **[SOAP](picoCTF-2023/Web_Exploitation/SOAP.md) (Solved)**
 - **[More SQLi](picoCTF-2023/Web_Exploitation/More_SQLi.md) (Solved)**
-- **[Java Code Analysis!?!](picoCTF-2023/Web_Exploitation/JavaCodeAnalysis) (Solved)**
+- **[Java Code Analysis!?!](picoCTF-2023/Web_Exploitation/JavaCodeAnalysis.md) (Solved)**
 - cancri-sp
 - msfroggenerator2
 

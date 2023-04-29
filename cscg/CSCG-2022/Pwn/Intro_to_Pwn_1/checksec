@@ -1,9 +1,0 @@
-[root@cscg intro-pwn-1]$ checksec --file=pwn1
-RELRO           STACK CANARY      NX            PIE             RPATH      RUNPATH	Symbols		FORTIFY	Fortified	Fortifiable	FILE
-Partial RELRO   Canary found      NX enabled    PIE enabled     No RPATH   No RUNPATH   55) Symbols	  No	0		1		pwn1
-[root@cscg intro-pwn-1]$ 
-
-RELRO	-> external functions are resolved once they are called (partial RELRO)
-CANARY	-> hinder exploitation of stack buffer overflows (Canary found)
-NX	-> stack is not executable (NX enabled)
-PIE	-> binary loads itself at a random address (PIE enabled)

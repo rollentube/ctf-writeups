@@ -50,7 +50,7 @@ TrackingId=281bcO9BAGKvZXDq' AND (SELECT 'a' FROM users WHERE username='administ
 ```
 This can be done either by manually changing the number or using Burp Intruder to automate things up. The Intruder can be configured like the following:
 | Positions | Payloads | Settings | Results |
-| --------- | -------- | -------- | ------ |
+| --------- | -------- | -------- | ------- |
 | ![Positions](images/Blind_SQL_injection_Burp_Intruder/Blind_SQL_injection_Burp_Intruder_length_0.png) | ![Payloads](images/Blind_SQL_injection_Burp_Intruder/Blind_SQL_injection_Burp_Intruder_length_1.png) | ![Settings](images/Blind_SQL_injection_Burp_Intruder/Blind_SQL_injection_Burp_Intruder_length_2.png) | ![Results](images/Blind_SQL_injection_Burp_Intruder/Blind_SQL_injection_Burp_Intruder_length_3.png) |
 
 In the results we see that the response for `LENGTH(password)>20)='a` won't give the welcome message. So our password is 20 characters long.
@@ -73,7 +73,7 @@ TrackingId=281bcO9BAGKvZXDq' AND (SELECT SUBSTRING(password,2,1) FROM users WHER
 
 The configuration of Intruder looks like the following:
 | Positions | Payloads | Results |
-| --------- | -------- | ------ |
+| --------- | -------- | ------- |
 | ![Positions](images/Blind_SQL_injection_Burp_Intruder/Blind_SQL_injection_Burp_Intruder_char_sniper_0.png) | ![Payloads](images/Blind_SQL_injection_Burp_Intruder/Blind_SQL_injection_Burp_Intruder_char_sniper_1.png) | ![Results](images/Blind_SQL_injection_Burp_Intruder/Blind_SQL_injection_Burp_Intruder_char_sniper_2.png) |
 
 We will find the password of the administrator: `6718hmev95qbvnbglc8o`

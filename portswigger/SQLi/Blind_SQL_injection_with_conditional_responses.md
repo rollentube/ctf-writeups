@@ -9,7 +9,7 @@ To solve the lab, log in as the administrator user.
 
 ## Blind SQL injection
 We don't have the typical possibility to inject statement like before. The websites uses a cookie `TrackingId` to show the "Welcome back" message at the top of the page:
-![Welcome back](images/Blind_SQL_injection_with_conditional_responses_0.png)
+![Welcome back](images/Blind_SQL_injection_with_conditional_responses.png)
 
 From the description we know that this cookie is vulnerable to SQL injection. To make a use of this, we can inject statements in the value of the cookie, that create a conditional return value. If the value is true, the message will be shown. If it's false, it won't.
 

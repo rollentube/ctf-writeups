@@ -1,7 +1,7 @@
 # SQL injection
 SQL injection is an old-but-gold vulnerability responsible for many high-profile data breaches. Although relatively simple to learn, it can potentially be used for some high-severity exploits. This makes it an ideal first topic for beginners, and essential knowledge even for more experienced users.
 
-Solved labs: **12/18**
+Solved labs: **13/18**
 
 | Topic              | Lab name                                                                                                                                                                     | Status     |
 | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
@@ -17,7 +17,7 @@ Solved labs: **12/18**
 | Examining database | [SQL injection attack, listing the database contents on Oracle](SQL_injection_attack_listing_the_database_contents_on_Oracle.md)                                             | Solved     |
 | Blind SQLi         | [Blind SQL injection with conditional responses](Blind_SQL_injection_with_conditional_responses.md)                                                                          | Solved     |
 | Blind SQLi         | [Blind SQL injection with conditional errors](Blind_SQL_injection_with_conditional_errors.md)                                                                                | Solved     |
-| Blind SQLi         | Visible error-based SQL injection                                                                                                                                            | Not solved |
+| Blind SQLi         | [Visible error-based SQL injection](Visible_error-based_SQL_injection.md)                                                                                                    | Solved     |
 | Blind SQLi         | Blind SQL injection with time delays                                                                                                                                         | Not solved |
 | Blind SQLi         | Blind SQL injection with time delays and information retrieval                                                                                                               | Not solved |
 | Blind SQLi         | Blind SQL injection with out-of-band interaction                                                                                                                             | Not solved |

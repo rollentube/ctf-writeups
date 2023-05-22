@@ -79,7 +79,6 @@ The configuration of Intruder looks like the following:
 We will find the password of the administrator: `6718hmev95qbvnbglc8o`
 
 Logging in with those credentials solves this lab.
-![Solved](images/Blind_SQL_injection_with_conditional_responses_1.png)
 
 ### Payload (Cluster Bomb)
 With Burp Intruder we can automate the previous step further. With the attack type _Cluster Bomb_ we can save us the part of adjusting the statement manually.

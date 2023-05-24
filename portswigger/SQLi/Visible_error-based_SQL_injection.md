@@ -16,7 +16,7 @@ TrackingId=IeRhAtOxNT0AuPb2'
 Unterminated string literal started at position 52 in SQL SELECT * FROM tracking WHERE id = 'IeRhAtOxNT0AuPb2''. Expected  char
 ```
 
-Using the following query results in no error. So probably we have a MySQL database:
+Using the following query results in no error. So probably we have no Oracle database:
 ```
 TrackingId=IeRhAtOxNT0AuPb2'||(select null)||'
 ```

@@ -8,7 +8,7 @@ The database contains a different table called users, with columns called userna
 To solve the lab, log in as the administrator user.
 
 ## Disclaimer
-*This room requires Burp Collaborator, which is only usably with Burp Suite Professional.*
+**This room requires Burp Collaborator, which is only usably with Burp Suite Professional.**
 
 So for me this lab is not solvable. But I will explain the idea behind the attack and the payload you could use.
 

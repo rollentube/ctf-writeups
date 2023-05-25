@@ -6,7 +6,7 @@ The SQL query is executed asynchronously and has no effect on the application's 
 To solve the lab, exploit the SQL injection vulnerability to cause a DNS lookup to Burp Collaborator.
 
 ## Disclaimer
-*This room requires Burp Collaborator, which is only usably with Burp Suite Professional.*
+**This room requires Burp Collaborator, which is only usably with Burp Suite Professional.**
 
 So for me this lab is not solvable. But I will explain the idea behind the attack and the theoretical payload you could use.
 

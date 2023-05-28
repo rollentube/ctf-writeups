@@ -42,4 +42,4 @@ After we start the attack, the password can be found in the results:
 
 The password is `taylor`.
 
-If we login with thos credentials, the lab is solved.
+If we login with those credentials, the lab is solved.

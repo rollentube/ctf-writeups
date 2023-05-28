@@ -6,8 +6,8 @@ You dont have to follow the path, but if you want it is structured as followed:
 
 Server-side topics
 
-1. SQL injection
-2. Authentication
+1. [SQL injection](SQL_injection)
+2. [Authentication](Authentication)
 3. Directory traversal
 4. Command injection
 5. Business logic vulnerabilities

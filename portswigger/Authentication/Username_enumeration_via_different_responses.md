@@ -22,9 +22,9 @@ With this information we can adjust the positions:
 username=aq&password=§test§
 ```
 And load the password list as payload. Also we have to adjust the settings to grep for the new error message. If we start the attack we find the password to the user:
-[Found password](images/Username_enumeration_via_different_responses_5.png)
+![Found password](images/Username_enumeration_via_different_responses_5.png)
 
 We found the password `jennifer`.
 
 If we login with the credentials, the lab is solved:
-[Solved lab](images/Username_enumeration_via_different_responses_6.png)
+![Solved lab](images/Username_enumeration_via_different_responses_6.png)

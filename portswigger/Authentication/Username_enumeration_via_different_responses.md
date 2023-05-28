@@ -13,8 +13,8 @@ The application gives us a blog, with the ability to login. If we type in an inv
 So probably we get a different error, if the username is correct and only the password is incorrect.
 
 With Burp Intruder we can brute-force the username over the POST-request of the login. We pick the Attack type Sniper and change only the username. As payload we pick the type Simple list and import the provided username list. Also we grep for the value 'Invalid username' in the response and start the attack:
-| Positions | Payloads | Resource pool | Results |
-| --------- | -------- | ------------- | ------- |
+| Positions | Payloads | Settings | Results |
+| --------- | -------- | -------- | ------- |
 | ![Positions](images/Username_enumeration_via_different_responses_1.png) | ![Payloads](images/Username_enumeration_via_different_responses_2.png) | ![Settings](images/Username_enumeration_via_different_responses_3.png) | ![Results](images/Username_enumeration_via_different_responses_4.png) |
 
 As we can see in the results, we found the username `aq`, which is responding the error message 'Incorrect password'.

@@ -5,7 +5,7 @@ Solved labs: **1/14**
 
 | Topic                           | Lab name                                                                                                                                                                     | Status     |
 | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----------|
-| Password-based login            | [Username enumeration via different responses](Username_enumeration_via_different_responses.md)                                                                              | Not solved |
+| Password-based login            | [Username enumeration via different responses](Username_enumeration_via_different_responses.md)                                                                              | Solved     |
 | Multi-factor authentication     | 2FA simple bypass                                                                                                                                                            | Not solved |
 | Other authentication mechanisms | Password reset broken logic                                                                                                                                                  | Not solved |
 | Password-based login            | Username enumeration via subtly different responses                                                                                                                          | Not solved |

@@ -9,6 +9,7 @@ There is one folder for each platform I took part. In there you will find subfol
 So far I played on the following platforms:
 - picoCTF (https://play.picoctf.org/users/rollentube)
 - TryHackMe (https://tryhackme.com/p/rollentube)
+- HackTheBox (https://app.hackthebox.com/users/1390366)
 - CSCG
 - PortSwigger
 - OverTheWire

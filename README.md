@@ -10,6 +10,7 @@ So far I played on the following platforms:
 - picoCTF (https://play.picoctf.org/users/rollentube)
 - TryHackMe (https://tryhackme.com/p/rollentube)
 - HackTheBox (https://app.hackthebox.com/users/1390366)
+- HackTheBox Academy
 - CSCG
 - PortSwigger
 - OverTheWire

@@ -8,25 +8,25 @@ If there are solutions for the sections, I will discuss them.
 ## Table of Contents
 Table of Contents
 
-| Section                                                     | File                                |
-| ----------------------------------------------------------- | ----------------------------------- |
-| **Using Academy Effectively**                               |                                     |
-| Introduction to the Penetration Tester Path                 | [Overview](Overview.md)             |
-| Academy Modules Layout                                      | [Overview](Overview.md)             |
-| Academy Exercises & Questions                               | [Overview](Overview.md)             |
-| **Background & Preparation**                                |                                     |
-| Penetration Testing Overview                                | [Overview](Overview.md)             |
-| Laws and Regulations                                        | [Overview](Overview.md)             |
-| Penetration Testing Process                                 | [Overview](Overview.md)             |
-| **Penetration Testing Phases - Assessment Specific Stages** |                                     |
-| Pre-Engagement                                              | [Pre-Engagement](Pre-Engagement.md) |
-| Information Gathering                                       |                                     |
-| Vulnerability Assessment                                    |                                     |
-| Exploitation                                                |                                     |
-| Post-Exploitation                                           |                                     |
-| Lateral Movement                                            |                                     |
-| **Penetration Testing Phases - Project Closeout**           |                                     |
-| Proof-of-Concept                                            |                                     |
-| Post-Engagement                                             |                                     |
-| **Preparing for Real-World Pentests**                       |                                     |
-| Practice                                                    |                                     |
+| Section                                                     | File                                                    |
+| ----------------------------------------------------------- | ------------------------------------------------------- |
+| **Using Academy Effectively**                               |                                                         |
+| Introduction to the Penetration Tester Path                 | [Overview](Overview.md)                                 |
+| Academy Modules Layout                                      | [Overview](Overview.md)                                 |
+| Academy Exercises & Questions                               | [Overview](Overview.md)                                 |
+| **Background & Preparation**                                |                                                         |
+| Penetration Testing Overview                                | [Overview](Overview.md)                                 |
+| Laws and Regulations                                        | [Overview](Overview.md)                                 |
+| Penetration Testing Process                                 | [Overview](Overview.md)                                 |
+| **Penetration Testing Phases - Assessment Specific Stages** |                                                         |
+| Pre-Engagement                                              | [Pre-Engagement](Pre-Engagement.md)                     |
+| Information Gathering                                       | [Information Gathering](Information_Gathering.md)       |
+| Vulnerability Assessment                                    | [Vulnerability Assessment](Vulnerability_Assessment.md) |
+| Exploitation                                                |                                                         |
+| Post-Exploitation                                           |                                                         |
+| Lateral Movement                                            |                                                         |
+| **Penetration Testing Phases - Project Closeout**           |                                                         |
+| Proof-of-Concept                                            |                                                         |
+| Post-Engagement                                             |                                                         |
+| **Preparing for Real-World Pentests**                       |                                                         |
+| Practice                                                    |                                                         |

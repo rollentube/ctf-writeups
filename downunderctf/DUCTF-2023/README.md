@@ -1,5 +1,5 @@
 # DownUnderCTF 2023
-DownUnderCTF is the largest online Australian run Capture The Flag (CTF) competition with over 4100+ registered users and over 1900+ registered teams (2022). Its main goal is to try to up-skill the next generation of potential Cyber Security Professionals and increase the CTF community's size here in Australia. Prizes are only for Australian Secondary or Tertiary school students. However, our CTF is online and open for anyone to play worldwide.
+[Certificate](./cert/ductf-certificate.jpg)
 
 ## Challenges
 ### beginner (9/18)

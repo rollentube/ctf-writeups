@@ -4,4 +4,6 @@ DownUnderCTF is the largest online Australian run Capture The Flag (CTF) competi
 ## Competitions
 * [DownUnder CTF 2023](DUCTF-2023)
 
-Challenges and official write ups: https://github.com/DownUnderCTF
+## Reference
+* Challenges and official write ups: https://github.com/DownUnderCTF
+* Homepage: https://play.duc.tf/

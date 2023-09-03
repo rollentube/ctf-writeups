@@ -3,26 +3,26 @@
 
 ## Challenges
 ### beginner (9/18)
-| Challenge                                                              | Category | Status     |
-| ---------------------------------------------------------------------- | -------- | ---------- |
-| xxd-server                                                             | web      | Not solved |
-| one byte                                                               | pwn      | Not solved |
-| flag art                                                               | crypto   | Not solved |
-| randomly chosen                                                        | crypto   | Not solved |
-| helpless                                                               | misc     | Not solved |
-| [downunderflow](./pwn/downunderflow.md)                                | pwn      | Solved     |
-| [discord](./misc/discord.md)                                           | misc     | Solved     |
-| [𝕏](./misc/x.md)                                                       | misc     | Solved     |
-| complementary                                                          | crypto   | Not solved |
-| [blinkybill](./misc/blinkybill.md)                                     | misc     | Solved     |
-| pyny                                                                   | rev      | Not solved |
-| [All Father's Wisdom](./rev/All_Fathers_Wisdom.md)                     | rev      | Solved     |
-| [the bridgekeepers 3rd question](./rev/the_bridgekeepers_3rd_question) | rev      | Solved     |
-| [proxed](./web/proxed.md)                                              | web      | Solved     |
-| [Welcome to DUCTF!](./misc/Welcome_to_DUCTF.md)                        | misc     | Solved     |
-| Needle In IAM                                                          | misc     | Not solved |
-| [static file server](./web/static_file_servermd)                       | web      | Solved     |
-| confusing                                                              | pwn      | Not solved |
+| Challenge                                                                 | Category | Status     |
+| ------------------------------------------------------------------------- | -------- | ---------- |
+| xxd-server                                                                | web      | Not solved |
+| one byte                                                                  | pwn      | Not solved |
+| flag art                                                                  | crypto   | Not solved |
+| randomly chosen                                                           | crypto   | Not solved |
+| helpless                                                                  | misc     | Not solved |
+| [downunderflow](./pwn/downunderflow.md)                                   | pwn      | Solved     |
+| [discord](./misc/discord.md)                                              | misc     | Solved     |
+| [𝕏](./misc/x.md)                                                          | misc     | Solved     |
+| complementary                                                             | crypto   | Not solved |
+| [blinkybill](./misc/blinkybill.md)                                        | misc     | Solved     |
+| pyny                                                                      | rev      | Not solved |
+| [All Father's Wisdom](./rev/All_Fathers_Wisdom.md)                        | rev      | Solved     |
+| [the bridgekeepers 3rd question](./rev/the_bridgekeepers_3rd_question.md) | rev      | Solved     |
+| [proxed](./web/proxed.md)                                                 | web      | Solved     |
+| [Welcome to DUCTF!](./misc/Welcome_to_DUCTF.md)                           | misc     | Solved     |
+| Needle In IAM                                                             | misc     | Not solved |
+| [static file server](./web/static_file_server.md)                         | web      | Solved     |
+| confusing                                                                 | pwn      | Not solved |
 
 ### blockchain (0/4)
 | Challenge            | Difficulty | Status     |

@@ -11,8 +11,9 @@ So far I played on the following platforms:
 - TryHackMe (https://tryhackme.com/p/rollentube)
 - HackTheBox (https://app.hackthebox.com/users/1390366)
 - HackTheBox Academy
-- CSCG
 - PortSwigger
+- CSCG
+- DownUnderCTF
 - OverTheWire
 
 ## Disclaimer

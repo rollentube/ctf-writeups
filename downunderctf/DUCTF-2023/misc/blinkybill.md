@@ -10,7 +10,7 @@ blinkybill.wav
 
 ## Solution
 Listening to the audio file, we can hear blinky bill with something in the background that is listening like morse code. Opening the file in Audacity, changing to spectogram and playing around with the rate and the colors give us this picture:
-[Blinkybill](images/blinkybill.png)
+![Blinkybill](images/blinkybill.png)
 
 We can see pretty clearly a morse code with long and short signals.
 

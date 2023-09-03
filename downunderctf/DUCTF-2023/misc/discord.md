@@ -44,6 +44,6 @@ Happy Hacking!
 ```
 
 Below the rules is also a video with a weird spoken text and video over monkeys. At the end of the video, the voice actor is saying letters in the NATO alphabet. In the last seconds of the video are the letters also printed on the display:
-[Flag](images/discord.png)
+![Flag](images/discord.png)
 
 From that we get our flag: `DUCTF{REJECTHUMANITYRETURNTOOURSUPPORTQUEUE}`

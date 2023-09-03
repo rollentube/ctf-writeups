@@ -10,7 +10,7 @@ static-file-server.zip
 
 ## Solution
 The website shows the following:
-[File Server](images/static_file_server.png)
+![File Server](images/static_file_server.png)
 
 Opening the file _not the flag_ shows the following content:
 ```

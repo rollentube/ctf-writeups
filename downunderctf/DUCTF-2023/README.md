@@ -1,5 +1,5 @@
 # DownUnderCTF 2023
-[Certificate](./cert/ductf-certificate.jpg)
+![Certificate](./cert/ductf-certificate.jpg)
 
 ## Challenges
 ### beginner (9/18)

@@ -8,7 +8,7 @@ grades\_grades\_grades.tar.gz
 
 ## Solution
 The website brings us to page where we can sign up and got shown some grades. Typing in random data shows the following:
-[Logged in](images/grades_grades_grades_0.png)
+![Logged in](images/grades_grades_grades_0.png)
 
 We can see that we got the Student Role _Student_ assigned.
 
@@ -68,7 +68,7 @@ Host: web-grades-grades-grades-c4627b227382.2023.ductf.dev
 stu_num=test1&stu_email=test%40test&password=test&is_teacher=True
 ```
 The website responses with `/?is_auth=True` and show up the already known interface, but with the _Teacher_ role:
-[Teacher Role](images/grades_grades_grades_1.png)
+![Teacher Role](images/grades_grades_grades_1.png)
 
 Know we have another tab called 'GRADING TOOL'. Here we can find our flag: `DUCTF{Y0u_Kn0W_M4Ss_A5s1GnM3Nt_c890ne89c3}`
-[Flag](images/grades_grades_grades_2.png)
+![Flag](images/grades_grades_grades_2.png)

@@ -72,6 +72,6 @@ But if the XFF isn't set, `ip` still contains the remote address.
 So to get the flag we have to set the X-Forwarded-For header to the ip 31.33.33.7 in the http request. The main.go will check if the content matches and returns the flag.
 
 To do so, we can use any tool to manipulate a http header. With BurpSuite it looks like the following:
-[XFF](images/proxed.png)
+![XFF](images/proxed.png)
 
 As we can see the response is the flag: `DUCTF{17_533m5_w3_f0rg07_70_pr0x}`

@@ -5,7 +5,7 @@ This module is an introduction to the Penetration Tester Job Role Path and a gen
 | Lab name                                                      | Status     |
 | ------------------------------------------------------------- | ---------- |
 | **Introduction**                                              |            |
-| 1. [Penetration Testing Process](Penetration_Testing_Process) | Working on |
+| 1. [Penetration Testing Process](Penetration_Testing_Process) | Solved     |
 | 2. Getting Started                                            | Not solved |
 | **Reconnaissance, Enumeration & Attack Planning**             |            |
 | 3. Network Enumeration with Nmap                              | Not solved |

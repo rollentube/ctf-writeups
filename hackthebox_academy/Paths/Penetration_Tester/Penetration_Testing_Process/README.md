@@ -24,9 +24,9 @@ Table of Contents
 | Vulnerability Assessment                                    | [Vulnerability Assessment](Vulnerability_Assessment.md) |
 | Exploitation                                                | [Exploitation](Exploitation.md)                         |
 | Post-Exploitation                                           | [Post-Exploitation](Post-Exploitation.md)               |
-| Lateral Movement                                            |                                                         |
+| Lateral Movement                                            | [Lateral Movement](Lateral_Movement.md)                 |
 | **Penetration Testing Phases - Project Closeout**           |                                                         |
-| Proof-of-Concept                                            |                                                         |
-| Post-Engagement                                             |                                                         |
+| Proof-of-Concept                                            | [Proof-of-Concept](Proof-of-Concept.md)                 |
+| Post-Engagement                                             | [Post-Engagement](Post-Engagement.md)                   |
 | **Preparing for Real-World Pentests**                       |                                                         |
-| Practice                                                    |                                                         |
+| Practice                                                    | [Practice](Practice.md)                                 |

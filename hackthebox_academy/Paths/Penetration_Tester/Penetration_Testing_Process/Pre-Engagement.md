@@ -101,5 +101,6 @@ With the meeting we explain on a professional way the entire process for the cus
 
 ## Questions
 How many documents must be prepared in total for a penetration test?
-
-The answer can be found under the NDA paragraph.
+```
+> 7 (see NDA)
+```

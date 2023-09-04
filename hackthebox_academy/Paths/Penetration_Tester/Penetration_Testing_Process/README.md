@@ -22,7 +22,7 @@ Table of Contents
 | Pre-Engagement                                              | [Pre-Engagement](Pre-Engagement.md)                     |
 | Information Gathering                                       | [Information Gathering](Information_Gathering.md)       |
 | Vulnerability Assessment                                    | [Vulnerability Assessment](Vulnerability_Assessment.md) |
-| Exploitation                                                |                                                         |
+| Exploitation                                                | [Exploitation](Exploitation.md)                         |
 | Post-Exploitation                                           |                                                         |
 | Lateral Movement                                            |                                                         |
 | **Penetration Testing Phases - Project Closeout**           |                                                         |

@@ -60,10 +60,10 @@ Nmap done: 1 IP address (1 host up) scanned in 27.54 seconds
 └─$ 
 ```
 ### HTTP
-[Website](./images/website.png)
+![Website](./images/website.png)
 
 On the website we find some information over the software Overpass and the corresponding downloads. Nothing more interesting here. Under the _About Us_ section we found several usernames. Maybe they could be used for something:
-[About](./images/about.png)
+![About](./images/about.png)
 
 * Ninja
 * Pars
@@ -108,7 +108,7 @@ by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
 
 ## Exploit HTTP
 _/admin_ shows a login page:
-[Admin](./images/admin.png)
+![Admin](./images/admin.png)
 
 The corresponding login functionality is the also found: _login.js_.
 
@@ -135,10 +135,10 @@ async function login() {
 The interesting part here is, that there is a check if the response equals to "Incorrect credentials". Otherwise the function will set a cookie called "SessionToken" with the value of the response without checking it any fourther. Fourther we will be redirected to _/admin_.
 
 So it seems like there is no verification for the value of the cookie. So we can try to generate this cookie with some random value:
-[Cookie](./images/cookie.png)
+![Cookie](./images/cookie.png)
 
 Trying to login again and reload the page afterwards, result in the following response:
-[Admin Login](./images/logged_in.png)
+![Admin Login](./images/logged_in.png)
 
 Seems like we found the private key of James.
 

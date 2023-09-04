@@ -23,7 +23,7 @@ Table of Contents
 | Information Gathering                                       | [Information Gathering](Information_Gathering.md)       |
 | Vulnerability Assessment                                    | [Vulnerability Assessment](Vulnerability_Assessment.md) |
 | Exploitation                                                | [Exploitation](Exploitation.md)                         |
-| Post-Exploitation                                           |                                                         |
+| Post-Exploitation                                           | [Post-Exploitation](Post-Exploitation.md)               |
 | Lateral Movement                                            |                                                         |
 | **Penetration Testing Phases - Project Closeout**           |                                                         |
 | Proof-of-Concept                                            |                                                         |

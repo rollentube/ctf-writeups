@@ -2,7 +2,7 @@
 ![Certificate](./cert/ductf-certificate.jpg)
 
 ## Challenges
-### beginner (9/18)
+### beginner (10/19)
 | Challenge                                                                 | Category | Status     |
 | ------------------------------------------------------------------------- | -------- | ---------- |
 | xxd-server                                                                | web      | Not solved |
@@ -23,6 +23,7 @@
 | Needle In IAM                                                             | misc     | Not solved |
 | [static file server](./web/static_file_server.md)                         | web      | Solved     |
 | confusing                                                                 | pwn      | Not solved |
+| [Survey](./misc/Survey.md)                                                | misc     | Solved     |
 
 ### blockchain (0/4)
 | Challenge            | Difficulty | Status     |

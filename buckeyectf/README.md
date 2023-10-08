@@ -7,4 +7,5 @@ BuckeyeCTF is intended to be beginner-friendly and is geared towards university 
 * [BuckeyeCTF 2023](./BuckeyeCTF-2023/)
 
 ## Reference
+* Challenges and official write ups: https://github.com/cscosu
 * Homepage: https://ctf.osucyber.club/

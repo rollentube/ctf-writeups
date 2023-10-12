@@ -1,13 +1,13 @@
 # Penetration Testing Process
+The module explains the entire penetration test process in detail and highlights the essential components with examples. Because a penetration test can potentially damage some systems, we must prepare ourselves and our customers. This includes creating and preparing a contract with the customer and covering what to look for and what aspects to consider.
+
 Some of the sections treat the same toppic, but in different depth. I will concentrate on the most important points and note them down. So some modules will be merged together in a single file. Other will be seperated.
 
 Also I won't sum up everything. If the paragraphs are on point and short enough, I will copy them. So all the credits belongs to HTB Academy. This applies for the pictures aswell.
 
 If there are solutions for the sections, I will discuss them.
 
-## Table of Contents
-Table of Contents
-
+## Module Sections
 | Section                                                     | File                                                    |
 | ----------------------------------------------------------- | ------------------------------------------------------- |
 | **Using Academy Effectively**                               |                                                         |

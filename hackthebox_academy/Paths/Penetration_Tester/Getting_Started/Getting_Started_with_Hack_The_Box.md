@@ -45,3 +45,4 @@ I will just summarize the named resources of this section.
 * [Dante Pro Lab](https://app.hackthebox.com/prolabs/overview/dante) (simulated enterprise networks, most beginner-friendly )
 
 ## Navigating HTB
+Skipping this section, because it only describes the HackTheBox platform.

@@ -20,6 +20,7 @@ CTF competitions (https://ctftime.org/user/169888):
 - CSCG
 - DownUnderCTF
 - BuckeyeCTF
+- DEADFACE CTF
 
 ## Disclaimer
 I am not a professional, I am just having fun learning new stuff and want to share my writeups. Also, this repo is a centralized kinda CTF KDB and timeline for me.

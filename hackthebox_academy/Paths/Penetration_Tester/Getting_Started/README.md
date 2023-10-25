@@ -29,8 +29,8 @@ This module introduces core penetration testing concepts, getting started with H
 | Nibbles - Privilege Escalation               | [Nibbles](./Nibbles.md)                                                     |
 | Nibbles - Alternate User Method - Metasploit | [Nibbles](./Nibbles.md)                                                     |
 | **Problem Solving**                          |                                                                             |
-| Common Pitfalls                              |                                                                             |
-| Getting Help                                 |                                                                             |
+| Common Pitfalls                              | [Problem Solving](./Problem_Solving.md)                                     |
+| Getting Help                                 | [Problem Solving](./Problem_Solving.md)                                     |
 | **What's Next?**                             |                                                                             |
-| Next Steps                                   |                                                                             |
+| Next Steps                                   | [Next Steps](./Next_Steps.md)                                               |
 | Knowledge Check                              |                                                                             |

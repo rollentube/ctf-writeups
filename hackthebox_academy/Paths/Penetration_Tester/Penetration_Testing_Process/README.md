@@ -1,4 +1,6 @@
 # Penetration Testing Process
+[Badge](https://academy.hackthebox.com/achievement/badge/1e760cdf-4b51-11ee-acfc-bea50ffe6cb4)
+
 The module explains the entire penetration test process in detail and highlights the essential components with examples. Because a penetration test can potentially damage some systems, we must prepare ourselves and our customers. This includes creating and preparing a contract with the customer and covering what to look for and what aspects to consider.
 
 Some of the sections treat the same toppic, but in different depth. I will concentrate on the most important points and note them down. So some modules will be merged together in a single file. Other will be seperated.

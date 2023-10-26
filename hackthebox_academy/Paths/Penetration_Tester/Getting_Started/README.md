@@ -36,3 +36,6 @@ This module introduces core penetration testing concepts, getting started with H
 | **What's Next?**                             |                                                                             |
 | Next Steps                                   | [Next Steps](./Next_Steps.md)                                               |
 | Knowledge Check                              | [Knowlegde Check](./Knowledge_Check.md)                                     |
+
+## Cheatsheet
+The official cheatsheet of the module by HackTheBox can be found [here](./Cheatsheet.md).

@@ -1,4 +1,6 @@
 # Getting Started
+[Badge](https://academy.hackthebox.com/achievement/badge/a1c8530c-7428-11ee-b5a6-bea50ffe6cb4)
+
 This module introduces core penetration testing concepts, getting started with Hack The Box, a step-by-step walkthrough of your first HTB box, problem-solving, and how to be successful in general when beginning in the field.
 
 ## Module Sections
@@ -33,4 +35,4 @@ This module introduces core penetration testing concepts, getting started with H
 | Getting Help                                 | [Problem Solving](./Problem_Solving.md)                                     |
 | **What's Next?**                             |                                                                             |
 | Next Steps                                   | [Next Steps](./Next_Steps.md)                                               |
-| Knowledge Check                              |                                                                             |
+| Knowledge Check                              | [Knowlegde Check](./Knowledge_Check.md)                                     |

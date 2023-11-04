@@ -367,6 +367,21 @@ uid=0(root) gid=0(root) groups=0(root)
 root@topology:~# 
 ```
 
+### Cronjobs
+As root we can also inspect the cronjobs that execute the `find` command:
+```
+root@topology:~# crontab -l
+crontab -l
+
+[...]
+
+# m h  dom mon dow   command
+* * * * * /opt/gnuplot/getdata.sh
+* * * * * find "/opt/gnuplot" -name "*.plt" -exec gnuplot {} \;
+*/10 * * * * find "/opt/gnuplot" -name "*.plt" -mmin +5 -mmin -300 -exec /usr/bin/rm -rf {} \;
+root@topology:~# 
+```
+
 ### Root flag
 Now we can read out the root flag:
 ```

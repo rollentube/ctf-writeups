@@ -1,4 +1,4 @@
-# [Day 1] Machine learning Chatbot, tell me, if you're really safe?
+# [Day 1] Machine learning - Chatbot, tell me, if you're really safe?
 McHoneyBell and her team were the first from Best Festival Company to arrive at the AntarctiCrafts office in the South Pole. Today is her first day on the job as the leader of the "Audit and Vulnerabilities" team, or the "B Team" as she affectionately calls them.
 
 In her mind, McSkidy's Security team have been the company's rockstars for years, so it's only natural for them to be the "A Team". McHoneyBell's new team will be second to them but equally as important. They'll operate in the shadows.

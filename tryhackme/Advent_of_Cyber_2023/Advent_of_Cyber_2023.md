@@ -26,3 +26,4 @@ Can you help McSkidy manage audits and infrastructure tasks while fending off mu
 | Room                      | Topic            | Description                              | Status |
 | ------------------------- | ---------------- | ---------------------------------------- | ------ |
 | [Day 1](./Day_1/Day_1.md) | Machine learning | Chatbot, tell me, if you're really safe? | Solved |
+| [Day 2](./Day_2/Day_2.md) | Log analysis     | O Data, All Ye Faithful                  | Solved |

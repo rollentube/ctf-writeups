@@ -24,7 +24,7 @@ Jupyter Notebooks are open-source documents containing code, text, and terminal 
 ## Solution
 I skipped directly to the challenges since I already worked with Python and Jupyter Notebooks.
 
-We have to run all cells to get our data and can fill out the cells for this room.
+We have to run all cells to get our data and can fill out the cells for this room. There isn't much more explanation than the commands. Those are just calls of the library.
 
 ### Open the notebook "Workbook" located in the directory "4_Capstone" on the VM. Use what you have learned today to analyse the packet capture.
 ![Workbook](./images/open_view.png)

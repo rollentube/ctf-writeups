@@ -28,3 +28,4 @@ Can you help McSkidy manage audits and infrastructure tasks while fending off mu
 | [Day 1](./Day_1/Day_1.md) | Machine learning | Chatbot, tell me, if you're really safe? | Solved |
 | [Day 2](./Day_2/Day_2.md) | Log analysis     | O Data, All Ye Faithful                  | Solved |
 | [Day 3](./Day_3/Day_3.md) | Brute-forcing    | Hydra is Coming to Town                  | Solved |
+| [Day 4](./Day_4/Day_4.md) | Brute-forcing | Baby, it's CeWLd outside | Solved |

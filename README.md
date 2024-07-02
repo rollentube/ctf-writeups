@@ -9,7 +9,7 @@ There is one folder for each platform/competition I took part. In there you will
 So far I played challenges on the following platforms:
 - picoCTF (https://play.picoctf.org/users/rollentube)
 - TryHackMe (https://tryhackme.com/p/rollentube)
-- HackTheBox (https://app.hackthebox.com/users/1390366)
+- HackTheBox (https://app.hackthebox.com/profile/1390366)
 - OverTheWire
 
 Learning platforms:

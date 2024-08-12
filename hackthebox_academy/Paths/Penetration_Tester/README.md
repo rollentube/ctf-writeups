@@ -1,8 +1,7 @@
 # Penetration Tester Path
 This module is an introduction to the Penetration Tester Job Role Path and a general introduction to Penetration Tests and each of the phases that we cover in-depth throughout the modules. We recommend starting the path with this module and referring to it periodically as you complete other modules to see how each topic area fits in the bigger picture of the penetration testing process. This module is also a great starting point for anyone new to HTB Academy or the industry.
 
-According to the [Streaming / Writeups / Walkthrough Guidelines](https://help.hackthebox.com/en/articles/5188925-streaming-writeups-walkthrough-guidelines) by HackTheBox, I can release writeups only for tier 0 modules. So other modules won't be release here. I'll document themn in a private repository and link the badges of the solved ones here.
-
+According to the [Streaming / Writeups / Walkthrough Guidelines](https://help.hackthebox.com/en/articles/5188925-streaming-writeups-walkthrough-guidelines) by HackTheBox, I can release writeups only for tier 0 modules. So other modules won't be release here. I'll document them in a private repository and link the badges of the solved ones here.
 
 ## Path
 | Lab name                                                                                 | Status     |
@@ -12,7 +11,7 @@ According to the [Streaming / Writeups / Walkthrough Guidelines](https://help.ha
 | 2. [Getting Started](Getting_Started)                                                    | Solved     |
 | **Reconnaissance, Enumeration & Attack Planning**                                        |            |
 | 3. [Network Enumeration with Nmap](https://academy.hackthebox.com/achievement/832016/19) | Solved     |
-| 4. Footprinting                                                                          | Not solved |
+| 4. [Footprinting](https://academy.hackthebox.com/achievement/832016/112)                 | Solved     |
 | 5. Information Gathering - Web Edition                                                   | Not solved |
 | 6. Vulnerability Assessment                                                              | Not solved |
 | 7. File Transfers                                                                        | Not solved |

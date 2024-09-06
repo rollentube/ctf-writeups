@@ -27,6 +27,6 @@ SELECT name, description FROM products WHERE category = 'Accessories' UNION SELE
 ```
 
 In the output of the website the users with passwords show up:
-![Successful UNION attack](images/SQL_injection_UNION_attack_retrieving_data_from_other_tables.png)
+![Successful UNION attack](../images/SQL_injection_UNION_attack_retrieving_data_from_other_tables.png)
 
 To login as the administrator we have to click on 'My account' and enter the found credentials. After that the lab is solved.

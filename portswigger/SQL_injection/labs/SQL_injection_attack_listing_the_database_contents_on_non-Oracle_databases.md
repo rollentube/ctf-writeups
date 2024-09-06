@@ -34,7 +34,7 @@ SELECT name, description FROM products WHERE category = 'Pets' UNION SELECT NULL
 ```
 
 And gives some kind of the following response:
-![Tables](images/SQL_injection_attack_listing_the_database_contents_on_non-Oracle_databases_0.png)
+![Tables](../images/SQL_injection_attack_listing_the_database_contents_on_non-Oracle_databases_0.png)
 
 Scrolling through the entries, we find an interesting table: `users_aydwzp`
 
@@ -47,7 +47,7 @@ SELECT name, description FROM products WHERE category = 'Pets' UNION SELECT NULL
 ```
 
 The table contains the columns `password_aynwgj` and `username_rigeck`. Seems like that what we are looking for:
-![Columns of user table](images/SQL_injection_attack_listing_the_database_contents_on_non-Oracle_databases_1.png)
+![Columns of user table](../images/SQL_injection_attack_listing_the_database_contents_on_non-Oracle_databases_1.png)
 
 
 In the last step we have to query the content of those columns:
@@ -59,6 +59,6 @@ SELECT name, description FROM products WHERE category = 'Pets' UNION SELECT user
 ```
 
 As we see, we got our administrator login with the password `umdpkx1cqsd6dsijd3wo`.
-![Found users](images/SQL_injection_attack_listing_the_database_contents_on_non-Oracle_databases_2.png)
+![Found users](../images/SQL_injection_attack_listing_the_database_contents_on_non-Oracle_databases_2.png)
 
 If we login with those credentials, the lab is solved.

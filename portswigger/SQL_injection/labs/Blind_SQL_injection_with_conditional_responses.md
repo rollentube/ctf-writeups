@@ -9,7 +9,7 @@ To solve the lab, log in as the administrator user.
 
 ## Blind SQL injection
 We don't have the typical possibility to inject statement like before. The websites uses a cookie `TrackingId` to show the "Welcome back" message at the top of the page:
-![Welcome back](images/Blind_SQL_injection_with_conditional_responses.png)
+![Welcome back](../images/Blind_SQL_injection_with_conditional_responses.png)
 
 From the description we know that this cookie is vulnerable to SQL injection. To make a use of this, we can inject statements in the value of the cookie, that create a conditional return value. If the value is true, the message will be shown. If it's false, it won't.
 
@@ -51,7 +51,7 @@ TrackingId=281bcO9BAGKvZXDq' AND (SELECT 'a' FROM users WHERE username='administ
 This can be done either by manually changing the number or using Burp Intruder to automate things up. The Intruder can be configured like the following:
 | Positions | Payloads | Settings | Results |
 | --------- | -------- | -------- | ------- |
-| ![Positions](images/Blind_SQL_injection_Burp_Intruder/Blind_SQL_injection_Burp_Intruder_length_0.png) | ![Payloads](images/Blind_SQL_injection_Burp_Intruder/Blind_SQL_injection_Burp_Intruder_length_1.png) | ![Settings](images/Blind_SQL_injection_Burp_Intruder/Blind_SQL_injection_Burp_Intruder_length_2.png) | ![Results](images/Blind_SQL_injection_Burp_Intruder/Blind_SQL_injection_Burp_Intruder_length_3.png) |
+| ![Positions](../images/Blind_SQL_injection_Burp_Intruder/Blind_SQL_injection_Burp_Intruder_length_0.png) | ![Payloads](../images/Blind_SQL_injection_Burp_Intruder/Blind_SQL_injection_Burp_Intruder_length_1.png) | ![Settings](../images/Blind_SQL_injection_Burp_Intruder/Blind_SQL_injection_Burp_Intruder_length_2.png) | ![Results](../images/Blind_SQL_injection_Burp_Intruder/Blind_SQL_injection_Burp_Intruder_length_3.png) |
 
 In the results we see that the response for `LENGTH(password)>20)='a` won't give the welcome message. So our password is 20 characters long.
 
@@ -74,7 +74,7 @@ TrackingId=281bcO9BAGKvZXDq' AND (SELECT SUBSTRING(password,2,1) FROM users WHER
 The configuration of Intruder looks like the following:
 | Positions | Payloads | Results |
 | --------- | -------- | ------- |
-| ![Positions](images/Blind_SQL_injection_Burp_Intruder/Blind_SQL_injection_Burp_Intruder_char_sniper_0.png) | ![Payloads](images/Blind_SQL_injection_Burp_Intruder/Blind_SQL_injection_Burp_Intruder_char_sniper_1.png) | ![Results](images/Blind_SQL_injection_Burp_Intruder/Blind_SQL_injection_Burp_Intruder_char_sniper_2.png) |
+| ![Positions](../images/Blind_SQL_injection_Burp_Intruder/Blind_SQL_injection_Burp_Intruder_char_sniper_0.png) | ![Payloads](../images/Blind_SQL_injection_Burp_Intruder/Blind_SQL_injection_Burp_Intruder_char_sniper_1.png) | ![Results](../images/Blind_SQL_injection_Burp_Intruder/Blind_SQL_injection_Burp_Intruder_char_sniper_2.png) |
 
 We will find the password of the administrator: `6718hmev95qbvnbglc8o`
 
@@ -91,7 +91,7 @@ TrackingId=281bcO9BAGKvZXDq' AND (SELECT SUBSTRING(password,§1§,1) FROM users 
 For the first sector we use the payload type _Numbers_ and for the second the type _Brute Forcer_:
 | Positions | Payload Numbers | Payload Brute Forcer | Results |
 | --------- | --------------- | -------------------- | ------- |
-| ![Positions](images/Blind_SQL_injection_Burp_Intruder/Blind_SQL_injection_Burp_Intruder_char_cluster_0.png) | ![Payload Numbers](images/Blind_SQL_injection_Burp_Intruder/Blind_SQL_injection_Burp_Intruder_char_cluster_1.png) | ![Payload Brute Forcer](images/Blind_SQL_injection_Burp_Intruder/Blind_SQL_injection_Burp_Intruder_char_cluster_2.png) | ![Results](images/Blind_SQL_injection_Burp_Intruder/Blind_SQL_injection_Burp_Intruder_char_cluster_3.png) |
+| ![Positions](../images/Blind_SQL_injection_Burp_Intruder/Blind_SQL_injection_Burp_Intruder_char_cluster_0.png) | ![Payload Numbers](../images/Blind_SQL_injection_Burp_Intruder/Blind_SQL_injection_Burp_Intruder_char_cluster_1.png) | ![Payload Brute Forcer](../images/Blind_SQL_injection_Burp_Intruder/Blind_SQL_injection_Burp_Intruder_char_cluster_2.png) | ![Results](../images/Blind_SQL_injection_Burp_Intruder/Blind_SQL_injection_Burp_Intruder_char_cluster_3.png) |
 
 This setup will test for every position of the password every character from the set. Sorting or filtering the results will show us the correct character for each position.
 

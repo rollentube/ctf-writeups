@@ -9,11 +9,11 @@ The application has a SQL injection vulnerability via XML. But it also uses a WA
 ## Solution
 As mentioned before, the application has a stock check feature, which is vulnerable:
 
-![Check stock](images/sql_injection_with_filter_bypass_via_xml_encoding_0.png)
+![Check stock](../images/sql_injection_with_filter_bypass_via_xml_encoding_0.png)
 
 If we take a look at the HTTP traffic via Burp Proxy, we can see a POST request for resolving the stock check using XML:
 
-![POST Request](images/sql_injection_with_filter_bypass_via_xml_encoding_1.png)
+![POST Request](../images/sql_injection_with_filter_bypass_via_xml_encoding_1.png)
 
 With a valid request, like shown, the application shows how many units are in stock.
 
@@ -99,7 +99,7 @@ Burp Suite has an extension for this use case called 'Hackvertor'. This extensio
 
 You can install extensions via the 'BApp Store' under the 'Extensions' tab. If it's installed, you can mark the text that you want to encode, right click it and select 'Extensions' -> 'Hackvertor' -> 'Encode' -> 'hex\_entities':
 
-![Check stock](images/sql_injection_with_filter_bypass_via_xml_encoding_2.png)
+![Check stock](../images/sql_injection_with_filter_bypass_via_xml_encoding_2.png)
 
 Burp than adds the tag `<@hex_entities>`:
 ```xml

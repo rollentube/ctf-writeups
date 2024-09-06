@@ -34,7 +34,7 @@ So we could try to just give an array with all password from the list as the val
 _You can convert the password list to a JSON array for example with this short [python script](Broken_brute-force_protection_multiple_credentials_per_request.py)_
 
 We get a 302 message:
-![Response](../images/Broken_brute-force_protection_multiple_credentials_per_request_0.png)
+![Response](../../images/Broken_brute-force_protection_multiple_credentials_per_request_0.png)
 
 As we often saw in labs with this application, this means that we hit a correct login. If we right click the response and pick 'Show response in browser', we will get to the logged in prompt of the user. So we successfully tested several passwords with a single request.
 

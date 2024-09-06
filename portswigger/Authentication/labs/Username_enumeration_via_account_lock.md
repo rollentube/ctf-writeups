@@ -13,7 +13,7 @@ For doing so, we set up two payload positions in Burp Intruder. One for the user
 
 | Positions | Payloads | Results |
 | --------- | -------- | ------- |
-| ![Positions](images/Username_enumeration_via_account_lock_0.png) | ![Payloads](images/Username_enumeration_via_account_lock_1.png) | ![Results](images/Username_enumeration_via_account_lock_2.png) |
+| ![Positions](../images/Username_enumeration_via_account_lock_0.png) | ![Payloads](../images/Username_enumeration_via_account_lock_1.png) | ![Results](../images/Username_enumeration_via_account_lock_2.png) |
 
 _If you are using Burp CE, the time throttle will cause, that the lock time is expired before the 5th login attempt was run. If you change the order of the username/password parameters in the POST request, you can run five attempts with one user straight: `password=test§§&username=§test§`_
 
@@ -21,7 +21,7 @@ As we can see in the results, there is one username called `adm`, that was succe
 
 In the next step we just try to brute-force the password of this user. Maybe there is a flaw, that reveals the user password, even if there is a account lock. The hope is that there will be a different response, if the password is correct. So we configure the username and use one payload position for the password. Using the Sniper attack type and the Simple list payload type with the password list to brute-force the login.
 
-![Password results](images/Username_enumeration_via_account_lock_3.png)
+![Password results](../images/Username_enumeration_via_account_lock_3.png)
 
 We found one password that has a 'Invalid username or password.' or 'You have made too many incorrect login attempts. Please try again in 1 minute(s).' error message: `moon`
 

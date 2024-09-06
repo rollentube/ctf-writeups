@@ -27,7 +27,7 @@ As attack type, we use Pitchfork. With that the values are changed together in e
 
 | Positions | Payloads | Results |
 | --------- | -------- | ------- |
-| ![Positions](images/Username_enumeration_via_response_timing_0.png) | ![Payloads](images/Username_enumeration_via_response_timing_1.png) | ![Results](images/Username_enumeration_via_response_timing_2.png) |
+| ![Positions](../images/Username_enumeration_via_response_timing_0.png) | ![Payloads](../images/Username_enumeration_via_response_timing_1.png) | ![Results](../images/Username_enumeration_via_response_timing_2.png) |
 
 As we can see in the results, there is one entry, which took a lot more of time. So our username is `apollo`.
 
@@ -38,7 +38,7 @@ username=apollo&password=§test§
 ```
 
 After we start the attack, the password can be found in the results:
-![Password](images/Username_enumeration_via_response_timing_3.png)
+![Password](../images/Username_enumeration_via_response_timing_3.png)
 
 The password is `taylor`.
 

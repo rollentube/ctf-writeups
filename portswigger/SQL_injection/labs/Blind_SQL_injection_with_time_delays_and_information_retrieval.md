@@ -50,7 +50,7 @@ The configuration and the results are shown below.
 
 | Positions | Payloads | Resource pool | Results |
 | --------- | -------- | ------------- | ------- |
-| ![Positions](images/Blind_SQL_injection_time_delay_Burp_Intruder/Blind_SQL_injection_time_delay_Burp_Intruder_0.png) | ![Payloads](images/Blind_SQL_injection_time_delay_Burp_Intruder/Blind_SQL_injection_time_delay_Burp_Intruder_1.png) | ![Resource pool](images/Blind_SQL_injection_time_delay_Burp_Intruder/Blind_SQL_injection_time_delay_Burp_Intruder_2.png) | ![Results](images/Blind_SQL_injection_time_delay_Burp_Intruder/Blind_SQL_injection_time_delay_Burp_Intruder_3.png) |
+| ![Positions](../images/Blind_SQL_injection_time_delay_Burp_Intruder/Blind_SQL_injection_time_delay_Burp_Intruder_0.png) | ![Payloads](../images/Blind_SQL_injection_time_delay_Burp_Intruder/Blind_SQL_injection_time_delay_Burp_Intruder_1.png) | ![Resource pool](../images/Blind_SQL_injection_time_delay_Burp_Intruder/Blind_SQL_injection_time_delay_Burp_Intruder_2.png) | ![Results](../images/Blind_SQL_injection_time_delay_Burp_Intruder/Blind_SQL_injection_time_delay_Burp_Intruder_3.png) |
 
 #### Password character
 Check for single characters:
@@ -66,7 +66,7 @@ TrackingId=RNF8Kn129ihmCTHM' || (SELECT CASE WHEN SUBSTR(password,§1§,1)='§a�
 The first parameter gets the payload type 'Numbers' and the second one 'Brute forcer' with the characters [a-z] and [0-9]. The other settings will be the same. In the results we see the correct characters with the longer response time.
 
 The process of the result will look like this:
-![Results](images/Blind_SQL_injection_time_delay_Burp_Intruder/Blind_SQL_injection_time_delay_Burp_Intruder_4.png)
+![Results](../images/Blind_SQL_injection_time_delay_Burp_Intruder/Blind_SQL_injection_time_delay_Burp_Intruder_4.png)
 
 _Keep in mind that with Burp CE the Cluster Bomb attack will take a lot more time than it would in the Premium Edition._
 

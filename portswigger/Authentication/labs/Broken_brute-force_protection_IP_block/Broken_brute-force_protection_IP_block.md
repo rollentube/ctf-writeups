@@ -47,7 +47,7 @@ In the Burp Intruder we configure two positions (username and password) and sele
 
 | Positions | Payloads | Resource pool | Results |
 | --------- | -------- | ------------- | ------- |
-| ![Positions](../images/Broken_brute-force_protection_IP_block_0.png) | ![Payloads](../images/Broken_brute-force_protection_IP_block_1.png) | ![Resource pool](../images/Broken_brute-force_protection_IP_block_2.png) | ![Results](../images/Broken_brute-force_protection_IP_block_3.png) |
+| ![Positions](../../images/Broken_brute-force_protection_IP_block_0.png) | ![Payloads](../../images/Broken_brute-force_protection_IP_block_1.png) | ![Resource pool](../../images/Broken_brute-force_protection_IP_block_2.png) | ![Results](../../images/Broken_brute-force_protection_IP_block_3.png) |
 
 We can filter the results for the status code 302, which means a successful login, and search for the entry with the username 'carlos'. And as we can see, we found the related password `zxcvbn`.
 

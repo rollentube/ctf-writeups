@@ -23,6 +23,6 @@ SELECT name, description FROM products WHERE category = 'Accessories' UNION SELE
 ```
 
 As expected we get the users:
-![Successful UNION attack](images/SQL_injection_UNION_attack_retrieving_multiple_values_in_a_single_column.png)
+![Successful UNION attack](../images/SQL_injection_UNION_attack_retrieving_multiple_values_in_a_single_column.png)
 
 To solve the lab we have to login on the website as the administrator.

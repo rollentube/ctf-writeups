@@ -71,3 +71,13 @@ Lab: [Password reset broken logic](../labs/Password_reset_broken_logic.md)
     * can reset the password of the user
 
 Lab: [Password reset poisoning via middleware](../labs/Password_reset_poisoning_via_middleware.md)
+
+### Changing user passwords
+* typically current password needed to change to a new one
+* pages rely on process for checking username and password match (like login page)
+  * vulnerable to the same techniques
+* dangerous if it allows to access it directly without being logged in as a specific user
+* example: username is provided in a hidden field -> attacker can change it to another user
+  * can be lead to password brute-forcing
+
+Lab: [Password brute-force via password change](../labs/Password_brute-force_via_password_change.md)

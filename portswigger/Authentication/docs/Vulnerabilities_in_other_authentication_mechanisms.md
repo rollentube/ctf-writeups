@@ -62,4 +62,12 @@ http://vulnerable-website.com/reset-password?token=a0ba0d1cb3b63d13822572fcff1a2
   * attack could visit the reset form from his user
   * delete the token
   * leverage the page to the reset of another user's password
-  * Lab: [Password reset broken logic](../labs/Password_reset_broken_logic.md)
+
+Lab: [Password reset broken logic](../labs/Password_reset_broken_logic.md)
+
+* another problem can be if the URL is generated dynamically
+  * could be vulnerable to [password reset poisoning](./Password_reset_poisoning.md)
+    * the attacker can steal the token from another user
+    * can reset the password of the user
+
+Lab: [Password reset poisoning via middleware](../labs/Password_reset_poisoning_via_middleware.md)

@@ -11,7 +11,7 @@ Flag format: `CACI{.*}`
 ## Solution
 If we access the URL, we see the following website:
 
-![Website](../images/giraffe_notes_0.png)
+![Website](./images/giraffe_notes_0.png)
 
 Nothing interesting to find here.
 
@@ -54,9 +54,9 @@ if (!$allowed) {
 
 So if the IP from the header matches, we get another content. We can set the header for example with Burp:
 
-![Request](../images/giraffe_notes_1.png)
+![Request](./images/giraffe_notes_1.png)
 
 And as response, we get the site with the flag:
 
-![Response](../images/giraffe_notes_2.png)
+![Response](./images/giraffe_notes_2.png)
 

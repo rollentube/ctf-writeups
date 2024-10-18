@@ -18,3 +18,6 @@ I have not participated in this competition. The writeups are only reworkings on
 
 ## picoGym Exclusive
 Not a competition, just challenges.
+
+## picoMini by redpwn
+I have not participated in this competition. The writeups are only reworkings on my part.

@@ -12,3 +12,9 @@ I have not participated in this competition. The writeups are only reworkings on
 
 ## picoCTF 2021
 I have not participated in this competition. The writeups are only reworkings on my part.
+
+## picoCTF 2019
+I have not participated in this competition. The writeups are only reworkings on my part.
+
+## picoGym Exclusive
+Not a competition, just challenges.

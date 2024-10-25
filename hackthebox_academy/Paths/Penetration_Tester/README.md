@@ -13,7 +13,7 @@ According to the [Streaming / Writeups / Walkthrough Guidelines](https://help.ha
 | 3. [Network Enumeration with Nmap](https://academy.hackthebox.com/achievement/832016/19)        | Solved     |
 | 4. [Footprinting](https://academy.hackthebox.com/achievement/832016/112)                        | Solved     |
 | 5. [Information Gathering - Web Edition](https://academy.hackthebox.com/achievement/832016/144) | Solved     |
-| 6. Vulnerability Assessment                                                                     | Not solved |
+| 6. [Vulnerability Assessment](https://academy.hackthebox.com/achievement/832016/108)            | Solved     |
 | 7. File Transfers                                                                               | Not solved |
 | 8. Shells & Payloads                                                                            | Not solved |
 | 9. Using the Metasploit Framework                                                               | Not solved |

@@ -4,5 +4,5 @@ According to the [Streaming / Writeups / Walkthrough Guidelines](https://help.ha
 | Pro Lab     | Badge                                                                      |
 | ----------- | -------------------------------------------------------------------------- |
 | **Alchemy** | [Completed 100%](https://www.hackthebox.com/achievement/badge/1390366/223) |
-| **Dante**   | No badge yet.                                                              |
+| **Dante**   | [Completed 25%](https://www.hackthebox.com/achievement/badge/1390366/70)   |
 

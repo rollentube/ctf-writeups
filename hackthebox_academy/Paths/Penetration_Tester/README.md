@@ -14,10 +14,10 @@ According to the [Streaming / Writeups / Walkthrough Guidelines](https://help.ha
 | 4. [Footprinting](https://academy.hackthebox.com/achievement/832016/112)                        | Solved     |
 | 5. [Information Gathering - Web Edition](https://academy.hackthebox.com/achievement/832016/144) | Solved     |
 | 6. [Vulnerability Assessment](https://academy.hackthebox.com/achievement/832016/108)            | Solved     |
-| 7. File Transfers                                                                               | Not solved |
-| 8. Shells & Payloads                                                                            | Not solved |
-| 9. Using the Metasploit Framework                                                               | Not solved |
-| **Exploitation & Lateral Movement**                                                             |
+| 7. [File Transfers](https://academy.hackthebox.com/achievement/832016/24)                       | Solved     |
+| 8. [Shells & Payloads](https://academy.hackthebox.com/achievement/832016/115)                   | Solved     |
+| 9. [Using the Metasploit Framework](https://academy.hackthebox.com/achievement/832016/39)       | Solved     |
+| **Exploitation & Lateral Movement**                                                             |            |
 | 10. Password Attacks                                                                            | Not solved |
 | 11. Attacking Common Services                                                                   | Not solved |
 | 12. Pivoting, Tunneling, and Port Forwarding                                                    | Not solved |

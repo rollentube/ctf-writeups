@@ -18,7 +18,7 @@ According to the [Streaming / Writeups / Walkthrough Guidelines](https://help.ha
 | 8. [Shells & Payloads](https://academy.hackthebox.com/achievement/832016/115)                   | Solved     |
 | 9. [Using the Metasploit Framework](https://academy.hackthebox.com/achievement/832016/39)       | Solved     |
 | **Exploitation & Lateral Movement**                                                             |            |
-| 10. Password Attacks                                                                            | Not solved |
+| 10. [Password Attacks](https://academy.hackthebox.com/achievement/832016/147)                   | Not solved |
 | 11. Attacking Common Services                                                                   | Not solved |
 | 12. Pivoting, Tunneling, and Port Forwarding                                                    | Not solved |
 | 13. Active Directory Enumeration & Attacks                                                      | Not solved |

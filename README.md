@@ -11,6 +11,7 @@ So far I played challenges on the following platforms:
 - TryHackMe (https://tryhackme.com/p/rollentube)
 - HackTheBox (https://app.hackthebox.com/profile/1390366)
 - OverTheWire
+- Blue Team Labs
 
 Learning platforms:
 - HackTheBox Academy
